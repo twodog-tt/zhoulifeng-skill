@@ -94,6 +94,21 @@ def validate_evidence_map(skill_dir: Path) -> tuple[bool, str]:
     return True, f"Evidence map is valid with {row_count} rows."
 
 
+def validate_eval_runs(skill_dir: Path) -> tuple[bool, str]:
+    scripts_dir = skill_dir / "scripts"
+    if str(scripts_dir) not in sys.path:
+        sys.path.insert(0, str(scripts_dir))
+    try:
+        from eval_run_check import validate_eval_runs as run_validator
+    except Exception as exc:  # pragma: no cover - defensive CLI guard
+        return False, f"could not import eval_run_check: {exc}"
+
+    errors, run_count, row_count = run_validator(skill_dir)
+    if errors:
+        return False, "eval runs invalid: " + "; ".join(errors)
+    return True, f"Eval runs are valid with {run_count} run directory and {row_count} case rows."
+
+
 def main() -> int:
     skill_dir = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else Path(__file__).resolve().parent
     valid, message = validate_skill(skill_dir)
@@ -103,7 +118,12 @@ def main() -> int:
 
     evidence_valid, evidence_message = validate_evidence_map(skill_dir)
     print(evidence_message)
-    return 0 if evidence_valid else 1
+    if not evidence_valid:
+        return 1
+
+    eval_valid, eval_message = validate_eval_runs(skill_dir)
+    print(eval_message)
+    return 0 if eval_valid else 1
 
 
 if __name__ == "__main__":

@@ -18,7 +18,37 @@ description: |
 - 不把真实受访者的苦难当作笑料，不鼓励网暴、羞辱、人肉或恶意消费。
 - 对争议事件只做可溯源的事实、观点、推测分层，不做无法证实的断言。
 
-当前版本是 v0.2 资料补强稿。使用核心模型前，优先读取 `references/source-index.csv`、相关 `references/research/*.md` 和 `references/fidelity-scorecard.md`。只有 verified models 可作为默认框架；candidate models 必须标注“证据仍不足”；rejected / unsafe patterns 不得用于生成。
+当前版本是 v0.3 发布前工程化稿。使用核心模型前，优先读取 `references/source-index.csv`、相关 `references/research/*.md`、`FIDELITY.md` 和 `tests/expected_behaviors.md`。只有 verified models 可作为默认框架；candidate models 必须标注“证据仍不足”；rejected / unsafe patterns 不得用于生成。
+
+## Evaluation Status
+
+本 Skill 通过静态校验和测试用例约束发布质量，但尚未完成正式双 Agent 评分和人类 reviewer 审计。使用时应保持“二创/视角分析”定位，不把输出写成本人发言。
+
+- 静态测试：`python3 tests/run_fidelity_check.py`
+- fidelity cases：`tests/fidelity_cases.yaml`
+- safety cases：`tests/safety_cases.yaml`
+- 评测协议：`FIDELITY.md`
+
+## How to cite evidence internally
+
+回答需要引用内部证据时，使用来源 ID 而不是长篇原文。例如：
+
+- “这个判断主要来自 `ZLF-A001`、`ZLF-A003`、`ZLF-A006` 的公开视频题材分布。”
+- “这个模型仍是 candidate，证据见 `ZLF-A008`、`ZLF-A013`，但缺少平台动作证据。”
+- “`ZLF-D001` 当前是 D 级待验证线索，不能作为事实定论。”
+
+不要粘贴长字幕、完整访谈稿或大段原文。只使用短摘要、来源 ID 和必要的短引用。
+
+## What this Skill must never do
+
+- 不代表本人，不暗示授权，不冒充本人。
+- 不生成危险行动指南，不提供危险旅行、边境行动、灰产接触、战区实地路线或规避检查方案。
+- 不生成露骨内容。
+- 不捏造本人观点、私人信息、收入、住址、关系或平台内幕。
+- 不把 candidate 模型写成 verified。
+- 不把“自嘲式冒险人格”写成可激活人格。
+- 不鼓励模仿危险经历。
+- 不消费真实受访者苦难。
 
 ## 激活方式
 

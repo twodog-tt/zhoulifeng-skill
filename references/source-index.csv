@@ -1,0 +1,12 @@
+id,title,platform,type,date,url_or_locator,primary_or_secondary,reliability,notes,local_path
+ZLF-A001,"26岁，患癌症，一个人在出租屋静静等死",Bilibili,B站公开视频,2022-12-30,https://www.bilibili.com/video/BV12g4y1v7EX/,primary,A,"公开视频样本；适合研究具体人、具体处境、病痛题材的表达边界。",references/research/01-primary-videos.md
+ZLF-A002,"中国最后一批三和大神，消失在黑网吧和挂壁房里",Bilibili,B站公开视频,2023-05-17,https://www.bilibili.com/video/BV1am4y167sp/,primary,A,"公开视频样本；适合研究边缘样本、现场采访和弱控制叙事。",references/research/01-primary-videos.md
+ZLF-A003,"太难了！我接近了令人闻风丧胆的三和大神",Bilibili,B站公开视频,2022-02-17,https://www.bilibili.com/video/BV1mK41157vy/,primary,A,"公开视频样本；适合研究三和题材早期切口。",references/research/01-primary-videos.md
+ZLF-A004,"我去了那个没人上班的地方",Bilibili,B站公开视频,2022-11-25,https://www.bilibili.com/video/BV17d4y1g72L/,primary,A,"公开视频样本；适合研究空间、劳动和荒诞现实切口。",references/research/01-primary-videos.md
+ZLF-A005,"我去了妙瓦底看中国人怎样被明码标价",Bilibili,B站公开视频,2023-08-17,https://www.bilibili.com/video/BV1Mh411G7Py/,primary,A,"公开视频样本；高风险题材，只用于内容边界和争议研究，不提炼行动路线。",references/research/04-external-views-and-controversies.md
+ZLF-A006,"自媒体对话录｜和周丽峰聊“文本与视频”",Bilibili,公开访谈,2022-12-09,https://www.bilibili.com/video/BV1Vm4y1S7BT/,primary,A,"公开视频访谈；适合研究内容方法、自我解释和文本/视频关系。",references/research/02-interviews-and-longform.md
+ZLF-A007,"大家其实不太了解这个社会｜峰哥亡命天涯｜周丽峰｜名人面对面",YouTube,公开视频访谈,2024-09-28,https://www.youtube.com/watch?v=9d8C0AUVKYU,primary,A,"公开视频访谈；适合研究其对社会理解、公共表达和内容位置的自述。",references/research/02-interviews-and-longform.md
+ZLF-B001,"“我知道妙瓦底，为什么还要去？”“封禁事变”之后的峰哥亡命天涯",腾讯新闻/深镜,公开媒体报道,2023-09-19,https://new.qq.com/rain/a/20230919A03X4E00,secondary,B,"媒体报道；适合研究妙瓦底内容、封禁争议和外部叙事。",references/research/04-external-views-and-controversies.md
+ZLF-C001,"周丽峰（B站UP主、旅行博主）",百度百科,百科,unknown,https://baike.baidu.com/item/%E5%91%A8%E4%B8%BD%E5%B3%B0/60775605,secondary,C,"第三方百科；只用于基础身份线索交叉核查，不作为核心模型证据。",references/research/06-timeline.md
+ZLF-C002,"峰哥亡命天涯",Wikipedia,百科,unknown,https://zh.wikipedia.org/wiki/%E5%B3%B0%E5%93%A5%E4%BA%A1%E5%91%BD%E5%A4%A9%E6%B6%AF,secondary,C,"第三方百科；只用于时间线线索和外部描述交叉核查。",references/research/06-timeline.md
+ZLF-C003,"如何评价 B 站 up 主@峰哥亡命天涯？",知乎,外部评论/批评,unknown,https://www.zhihu.com/question/507735568,secondary,C,"外部评论样本；只用于舆论分歧观察，不作为事实来源。",references/research/04-external-views-and-controversies.md

@@ -1,0 +1,8 @@
+source_id,title,model_ref,evidence_type,timestamp_or_section,summary,confidence,notes
+ZLF-A001,"真正的底层之我在三和当老哥，做日结真的可以做一天玩三天吗？真相泪目",底层现场主义,supporting,unknown,"三和日结题材以具体劳动现场和个体处境切入，支持具体现场优先的观察框架。",high,"未记录精确时间点；后续需补 timestamp。"
+ZLF-A001,"真正的底层之我在三和当老哥，做日结真的可以做一天玩三天吗？真相泪目",边缘样本优先,supporting,unknown,"关注主流叙事外的日结劳动者和低保障生活样本。",high,"不支持猎奇化或阶层羞辱。"
+ZLF-A002,"真正的底层之《深圳三和大神不为人知的艰辛》（完结篇）",底层现场主义,supporting,unknown,"作为三和题材延续样本，支持同一社会空间的连续观察。",medium,"需补分段摘要来确认故事推进。"
+ZLF-A003,"全B站最惨的B友，26岁患癌症无亲人，在出租屋静静等死",边缘样本优先,boundary,unknown,"病痛和出租屋处境可支持边缘个体观察，但同时强化隐私和尊严边界。",high,"不能把病痛处境用于玩梗或苦难消费。"
+ZLF-A003,"全B站最惨的B友，26岁患癌症无亲人，在出租屋静静等死",荒诞现实解构,unclear,unknown,"题材有强烈现实反差，但当前缺少短摘录和节奏证据，不能升级为 verified。",low,"candidate only。"
+ZLF-B001,"对话峰哥亡命天涯：不是所有视频都要有意义，也不是每次拍摄都能挣钱",内容判断四问,supporting,article title/summary,"媒体采访标题和摘要显示其公开讨论视频意义、收益和内容生产张力。",medium,"媒体概括不是本人完整原话。"
+ZLF-B001,"对话峰哥亡命天涯：不是所有视频都要有意义，也不是每次拍摄都能挣钱",流量红线雷达,unclear,article title/summary,"可作为内容意义与传播收益张力的线索，但不足以证明平台红线内部判断。",low,"不能用于推断封禁原因或规避策略。"

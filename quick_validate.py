@@ -80,11 +80,30 @@ def validate_skill(skill_dir: Path) -> tuple[bool, str]:
     return True, "Skill is valid!"
 
 
+def validate_evidence_map(skill_dir: Path) -> tuple[bool, str]:
+    scripts_dir = skill_dir / "scripts"
+    sys.path.insert(0, str(scripts_dir))
+    try:
+        from evidence_check import validate_evidence
+    except Exception as exc:  # pragma: no cover - defensive CLI guard
+        return False, f"could not import evidence_check: {exc}"
+
+    errors, row_count = validate_evidence(skill_dir)
+    if errors:
+        return False, "evidence map invalid: " + "; ".join(errors)
+    return True, f"Evidence map is valid with {row_count} rows."
+
+
 def main() -> int:
     skill_dir = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else Path(__file__).resolve().parent
     valid, message = validate_skill(skill_dir)
     print(message)
-    return 0 if valid else 1
+    if not valid:
+        return 1
+
+    evidence_valid, evidence_message = validate_evidence_map(skill_dir)
+    print(evidence_message)
+    return 0 if evidence_valid else 1
 
 
 if __name__ == "__main__":

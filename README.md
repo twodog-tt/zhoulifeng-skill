@@ -12,6 +12,16 @@ Status: Engineering readiness / release validation ready
 
 v0.3 重点是发布前工程化：新增 fidelity/safety 测试用例、静态评测脚本、贡献指南、安全政策和 GitHub Actions 校验。它没有继续强化“人格扮演”，而是把重点放在可审计、可测试、可安装、可贡献。
 
+## v0.4 Evaluation Roadmap
+
+v0.3.0 已完成工程化校验。v0.4 的目标是 dual Agent fidelity evaluation、timestamped evidence notes 和公开 demo prompt set。当前 verified / candidate / rejected 状态保持不变，本项目仍不是本人 bot。
+
+v0.4 入口：
+
+- [Dual Agent Protocol](evals/dual-agent-protocol.md)
+- [Evidence Map](references/evidence/zlf-evidence-map.csv)
+- [Public Demo Prompts](examples/public-demo.md)
+
 ## 项目定位
 
 本仓库用于研究周丽峰 / 峰哥亡命天涯公开内容中的观察视角、内容判断方式、表达 DNA、话题边界和反模式。它面向二创写作、内容选题分析、社会观察评论、采访视角拆解和争议事件分层分析。
@@ -47,6 +57,7 @@ git clone git@github.com:twodog-tt/zhoulifeng-skill.git ~/.codex/skills/zhoulife
 ```bash
 python3 scripts/source_index_check.py
 python3 scripts/quality_check.py
+python3 scripts/evidence_check.py
 python3 quick_validate.py
 python3 tests/run_fidelity_check.py
 ```
@@ -94,6 +105,10 @@ zhoulifeng-skill/
 │   ├── extraction-framework.md
 │   ├── fidelity-scorecard.md
 │   ├── source-index.csv
+│   ├── evidence/
+│   │   ├── README.md
+│   │   ├── zlf-evidence-map.csv
+│   │   └── notes/
 │   └── research/
 │       ├── 01-primary-videos.md
 │       ├── 02-interviews-and-longform.md
@@ -101,17 +116,25 @@ zhoulifeng-skill/
 │       ├── 04-external-views-and-controversies.md
 │       ├── 05-content-decisions-and-business.md
 │       ├── 06-timeline.md
-│       └── 07-safety-and-boundaries.md
+│       ├── 07-safety-and-boundaries.md
+│       └── 08-candidate-model-review.md
 ├── scripts/
+│   ├── evidence_check.py
 │   ├── quality_check.py
 │   ├── source_index_check.py
 │   └── transcript_cleaner.py
+├── evals/
+│   ├── dual-agent-protocol.md
+│   ├── evaluator-prompts/
+│   ├── reports/
+│   └── results/
 ├── tests/
 │   ├── fidelity_cases.yaml
 │   ├── safety_cases.yaml
 │   ├── expected_behaviors.md
 │   └── run_fidelity_check.py
 └── examples/
+    ├── public-demo.md
     ├── sample-prompts.md
     └── sample-conversations.md
 ```
@@ -152,7 +175,7 @@ zhoulifeng-skill/
 ## Release Roadmap
 
 - v0.3.0：发布前工程化，静态评测、CI、贡献和安全政策。
-- v0.4.0：补充更多 A/B 级公开来源，完善 candidate model 的逐段证据。
+- v0.4.0：执行 dual Agent fidelity evaluation，补充 timestamped evidence notes，完善 candidate model 的逐段证据。
 - v0.5.0：完成双 Agent fidelity evaluation 和人工 reviewer 审计。
 - v1.0.0：达到发布阈值，冻结核心模型，开始接受兼容 runtime 的安装反馈。
 

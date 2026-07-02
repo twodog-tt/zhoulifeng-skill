@@ -2,11 +2,13 @@
 
 一个基于公开资料提炼的“峰哥亡命天涯式社会观察” Agent Skill。
 
-本项目不是“峰哥本人 bot”，而是公开资料支持的观察框架 Skill。它不代表周丽峰本人，不声称获得授权，不生成本人声明。
+This project is a public-source-based perspective skill, not an official or authorized Zhou Lifeng bot.
 
 ## Current Status
 
-当前建议版本：`0.3.0`
+Current version: `v0.3.0`
+
+Status: Engineering readiness / release validation ready
 
 v0.3 重点是发布前工程化：新增 fidelity/safety 测试用例、静态评测脚本、贡献指南、安全政策和 GitHub Actions 校验。它没有继续强化“人格扮演”，而是把重点放在可审计、可测试、可安装、可贡献。
 

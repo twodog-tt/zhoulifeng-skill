@@ -1,12 +1,19 @@
 id,title,platform,type,date,url_or_locator,primary_or_secondary,reliability,notes,local_path
-ZLF-A001,"26岁，患癌症，一个人在出租屋静静等死",Bilibili,B站公开视频,2022-12-30,https://www.bilibili.com/video/BV12g4y1v7EX/,primary,A,"公开视频样本；适合研究具体人、具体处境、病痛题材的表达边界。",references/research/01-primary-videos.md
-ZLF-A002,"中国最后一批三和大神，消失在黑网吧和挂壁房里",Bilibili,B站公开视频,2023-05-17,https://www.bilibili.com/video/BV1am4y167sp/,primary,A,"公开视频样本；适合研究边缘样本、现场采访和弱控制叙事。",references/research/01-primary-videos.md
-ZLF-A003,"太难了！我接近了令人闻风丧胆的三和大神",Bilibili,B站公开视频,2022-02-17,https://www.bilibili.com/video/BV1mK41157vy/,primary,A,"公开视频样本；适合研究三和题材早期切口。",references/research/01-primary-videos.md
-ZLF-A004,"我去了那个没人上班的地方",Bilibili,B站公开视频,2022-11-25,https://www.bilibili.com/video/BV17d4y1g72L/,primary,A,"公开视频样本；适合研究空间、劳动和荒诞现实切口。",references/research/01-primary-videos.md
-ZLF-A005,"我去了妙瓦底看中国人怎样被明码标价",Bilibili,B站公开视频,2023-08-17,https://www.bilibili.com/video/BV1Mh411G7Py/,primary,A,"公开视频样本；高风险题材，只用于内容边界和争议研究，不提炼行动路线。",references/research/04-external-views-and-controversies.md
-ZLF-A006,"自媒体对话录｜和周丽峰聊“文本与视频”",Bilibili,公开访谈,2022-12-09,https://www.bilibili.com/video/BV1Vm4y1S7BT/,primary,A,"公开视频访谈；适合研究内容方法、自我解释和文本/视频关系。",references/research/02-interviews-and-longform.md
-ZLF-A007,"大家其实不太了解这个社会｜峰哥亡命天涯｜周丽峰｜名人面对面",YouTube,公开视频访谈,2024-09-28,https://www.youtube.com/watch?v=9d8C0AUVKYU,primary,A,"公开视频访谈；适合研究其对社会理解、公共表达和内容位置的自述。",references/research/02-interviews-and-longform.md
-ZLF-B001,"“我知道妙瓦底，为什么还要去？”“封禁事变”之后的峰哥亡命天涯",腾讯新闻/深镜,公开媒体报道,2023-09-19,https://new.qq.com/rain/a/20230919A03X4E00,secondary,B,"媒体报道；适合研究妙瓦底内容、封禁争议和外部叙事。",references/research/04-external-views-and-controversies.md
+ZLF-A001,"真正的底层之我在三和当老哥，做日结真的可以做一天玩三天吗？真相泪目",Bilibili,B站公开视频,2020-07-04,https://www.bilibili.com/video/BV13Z4y1p7yL/,primary,A,"本人账号公开视频；三和日结题材，适合研究底层现场、劳动叙事和具体空间。",references/research/01-primary-videos.md
+ZLF-A002,"真正的底层之《深圳三和大神不为人知的艰辛》（完结篇）",Bilibili,B站公开视频,2020-07-06,https://www.bilibili.com/video/BV12g4y1v7EX/,primary,A,"本人账号公开视频；三和题材后续样本，适合和 ZLF-A001 交叉看同一主题的推进。",references/research/01-primary-videos.md
+ZLF-A003,"全B站最惨的B友，26岁患癌症无亲人，在出租屋静静等死",Bilibili,B站公开视频,2021-08-10,https://www.bilibili.com/video/BV1K64y1s7sB/,primary,A,"本人账号公开视频；病痛和出租屋中的真实个体处境，要求强隐私和尊严边界。",references/research/01-primary-videos.md
+ZLF-A004,"广州黄埔区献血冠军，连续居住网吧长达10年",Bilibili,B站公开视频,2021-10-11,https://www.bilibili.com/video/BV1mu411Z7vJ/,primary,A,"本人账号公开视频；长期居住网吧的个体样本，适合研究边缘空间和人物观察。",references/research/01-primary-videos.md
+ZLF-A005,"老哥是如何炼成的？专访大神石头昔日挚友",Bilibili,B站公开视频,2023-04-18,https://www.bilibili.com/video/BV1824y1c7uX/,primary,A,"本人账号公开视频；以采访关系链进入人物处境，适合研究采访节奏和叙事距离。",references/research/01-primary-videos.md
+ZLF-A006,"最后的三和，保安老刘的一天",Bilibili,B站公开视频,2023-04-27,https://www.bilibili.com/video/BV16a4y1V7He/,primary,A,"本人账号公开视频；以一天生活和工作节奏承载三和后续观察，适合研究具体日常。",references/research/01-primary-videos.md
+ZLF-A007,"辍学老哥，从网管到期货交易员，30岁身价1000万后陷入巨大的虚无境地",Bilibili,B站公开视频,2024-06-19,https://www.bilibili.com/video/BV1Hf421B7zT/,primary,A,"本人账号公开视频；人物经历跨度较大，适合研究反差叙事和成功/虚无并置。",references/research/01-primary-videos.md
+ZLF-A008,"缅甸妙瓦底克伦联军招待所吃播vlog",Bilibili,B站公开视频,2023-09-10,https://www.bilibili.com/video/BV14P41187bJ/,primary,A,"本人账号公开视频；高风险边境/灰产叙事相关，只用于研究公共表达和安全边界，不进入行动指南。",references/research/04-external-views-and-controversies.md
+ZLF-A009,"峰哥在乌克兰险些被乌克兰中国人绑架，现在还没脱险",Bilibili,B站公开视频,2024-10-31,https://www.bilibili.com/video/BV1JjSEYUEyH/,primary,A,"本人账号公开视频；战争区域和人身安全叙事，必须避免路线、接触方式和风险规避建议。",references/research/04-external-views-and-controversies.md
+ZLF-A010,"峰哥深入俄乌战争前线伊久姆，看看战争给平民带来了什么？",Bilibili,B站公开视频,2024-11-02,https://www.bilibili.com/video/BV11MDPYQE97/,primary,A,"本人账号公开视频；战争平民题材，适合研究具体现场和受影响者视角，同时要求安全降级。",references/research/01-primary-videos.md
+ZLF-A011,"峰哥亡命天涯：镜头前卓别林、镜头外普通人",Bilibili,公开访谈,2024-04-15,https://www.bilibili.com/video/BV1Bz421C7mg/,primary,A,"公开访谈；第三方采访本人，适合研究自我解释、公众形象和表演性边界。",references/research/02-interviews-and-longform.md
+ZLF-A012,"周丽峰：大家其实不太了解这个社会",Bilibili,公开访谈,2025-01-31,https://www.bilibili.com/video/BV1iEFxedErn/,primary,A,"公开访谈；第三方采访本人，适合研究其社会观察自述和内容位置。",references/research/02-interviews-and-longform.md
+ZLF-A013,"对话 周丽峰 | 乌克兰前线「下集」",Bilibili,公开访谈,2025-01-20,https://www.bilibili.com/video/BV1dzwzeiEDQ/,primary,A,"公开访谈；围绕乌克兰前线经历展开，适合研究危险题材的叙事边界。",references/research/02-interviews-and-longform.md
+ZLF-B001,"对话峰哥亡命天涯：不是所有视频都要有意义，也不是每次拍摄都能挣钱",36氪,公开媒体采访,2024-05-29,https://36kr.com/p/2796467043365764,secondary,B,"媒体采访；可用于研究内容方法、商业化和视频意义/收益之间的张力。",references/research/05-content-decisions-and-business.md
+ZLF-D001,"“我知道妙瓦底，为什么还要去？”“封禁事变”之后的峰哥亡命天涯",腾讯新闻/深镜,旧报道链接待复核,2023-09-19,https://new.qq.com/rain/a/20230919A03X4E00,secondary,D,"旧链接当前返回 404；仅保留为待验证线索，不进入核心模型。",references/research/04-external-views-and-controversies.md
 ZLF-C001,"周丽峰（B站UP主、旅行博主）",百度百科,百科,unknown,https://baike.baidu.com/item/%E5%91%A8%E4%B8%BD%E5%B3%B0/60775605,secondary,C,"第三方百科；只用于基础身份线索交叉核查，不作为核心模型证据。",references/research/06-timeline.md
 ZLF-C002,"峰哥亡命天涯",Wikipedia,百科,unknown,https://zh.wikipedia.org/wiki/%E5%B3%B0%E5%93%A5%E4%BA%A1%E5%91%BD%E5%A4%A9%E6%B6%AF,secondary,C,"第三方百科；只用于时间线线索和外部描述交叉核查。",references/research/06-timeline.md
 ZLF-C003,"如何评价 B 站 up 主@峰哥亡命天涯？",知乎,外部评论/批评,unknown,https://www.zhihu.com/question/507735568,secondary,C,"外部评论样本；只用于舆论分歧观察，不作为事实来源。",references/research/04-external-views-and-controversies.md

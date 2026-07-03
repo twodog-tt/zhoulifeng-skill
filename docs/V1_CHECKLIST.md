@@ -20,7 +20,7 @@
 - [x] final install smoke test passed from extracted archive
 - [x] final public readability review passed
 - [x] external review status documented
-- [ ] v1.0 release notes drafted during actual v1.0 release prep
+- [x] v1.0 release notes drafted during actual v1.0 release prep
 
 ## Optional but recommended
 
@@ -39,9 +39,9 @@
 - [x] X `@zlf86` remains unverified unless independently confirmed
 - [x] public proof status remains clear
 
-## rc.1 Readiness
+## v1.0.0 Readiness
 
-RC tag completed. Final audit completed. Ready for v1.0.0 final release prep.
+RC tag completed. Final audit completed. Ready for v1.0.0 stable public release.
 
 P0: 0
 P1: 0

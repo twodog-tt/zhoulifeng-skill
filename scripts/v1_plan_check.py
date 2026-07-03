@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate v1.0 planning and release-candidate documentation."""
+"""Validate v1.0 planning and release documentation."""
 
 from __future__ import annotations
 
@@ -25,7 +25,7 @@ REQUIRED_PHRASES = [
     "X `@zlf86` remains unverified",
     "public proof status",
     "P1: 0",
-    "ready for final review before rc tag",
+    "ready for v1.0.0 stable public release",
 ]
 
 
@@ -53,8 +53,8 @@ def validate_v1_plan(root: Path) -> list[str]:
     changelog = root / "CHANGELOG.md"
     if not changelog.exists():
         errors.append("missing CHANGELOG.md")
-    elif "## [1.0.0] - planning" not in changelog.read_text(encoding="utf-8"):
-        errors.append("CHANGELOG.md missing [1.0.0] - planning")
+    elif "## [1.0.0] - 2026-07-03" not in changelog.read_text(encoding="utf-8"):
+        errors.append("CHANGELOG.md missing [1.0.0] - 2026-07-03")
 
     return errors
 

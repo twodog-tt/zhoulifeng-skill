@@ -16,13 +16,13 @@ This is an authorized style-draft Skill, not an official live/personhood bot or 
 
 ## Current Status
 
-Current version: `v0.9.0`
+Current version: `v1.0.0`
 
-Status: External review feedback and launch copy polish release
+Status: Stable public release
 
-v0.8.0 focuses on launch materials, external review workflow, source verification workflow, and archive packaging automation.
+v1.0.0 is the first stable public release of the authorized Zhou Lifeng / 峰哥亡命天涯 style Skill. It includes evidence tracking, verified / candidate / rejected model separation, safety hard boundaries, public demo outputs, evaluation records, human review records, external reviewer feedback records, source verification workflow, archive packaging workflow, and final v1.0 audit pass.
 
-Next planning track: `v1.0.0`, focused on broader external reviewer coverage, optional public proof links if available, screenshot/demo-run assets, stable install packaging, and final pre-1.0 source and candidate-model audit.
+This is stable for public use and review, but it is not proof of perfect fidelity, not proof that broad external review is complete, and not a real-time official statement generator.
 
 v0.7.0 在 v0.6.0 public readiness release 的基础上，完成 lowbrow / anti-polish voice calibration：新增 social media speech corpus、lowbrow voice calibration research、`FID-011` 到 `FID-014`、over-polished penalty、lowbrow boundary failure checks 和 v0.7-run-001 评测。v0.7-run-001 自动评测 `100/100`，release recommendation：`pass`；v0.7 lightweight human review 结论为 `Pass for v0.7.0 release prep`。This is an automated evaluation result, not proof of perfect fidelity.
 
@@ -43,6 +43,8 @@ v0.9.0 starts real external review intake. Feedback batch `EXT-001` has been rec
 - [Evidence Map](references/evidence/zlf-evidence-map.csv)
 - [Source Verification](references/source-verification/README.md)
 - [External Review](reviews/external/README.md)
+- [Final v1.0 Audit](reviews/final-v1.0-audit.md)
+- [v1.0.0 Release Notes](RELEASE_NOTES_v1.0.0.md)
 - [Fidelity Report](evals/reports/v0.4-fidelity-report.md)
 - [Authorization](AUTHORIZATION.md)
 - [Runtime Compatibility](docs/RUNTIME_COMPATIBILITY.md)
@@ -70,11 +72,11 @@ v0.7.0 已完成低体面/下三路/反升华口吻校准、自动评测和 ligh
 
 v0.8.0 不升级 candidate models，不放松 hard safety boundaries，不把未验证社交账号来源写成 verified evidence，也不把授权风格草稿描述成实时官方声明。v0.9 已录入第一条 reviewer concern 和 follow-up pass，但 full external review program 尚未完成。
 
-## v1.0 Planning
+## v1.0 Stable Release
 
-The project is preparing for a future stable `v1.0.0` release. This is planning and release-candidate preparation, not a v1.0 release.
+The project has completed final v1.0 audit and is maintained as the stable public `v1.0.0` baseline.
 
-Current v1.0-rc.1 readiness: ready for final review before rc tag. P0: `0`; P1: `0`; P2: `7` optional items remain and are not rc.1 release blockers.
+Final v1.0 audit result: archive content audit `pass`, install smoke test `pass`, public readability review `pass`, release blockers `none found`. P0: `0`; P1: `0`; P2: `7` optional items remain and are non-blocking.
 
 See:
 
@@ -86,6 +88,8 @@ See:
 - [docs/V1_READINESS.md](docs/V1_READINESS.md)
 - [docs/STABLE_PACKAGE.md](docs/STABLE_PACKAGE.md)
 - [reviews/pre-v1.0-audit.md](reviews/pre-v1.0-audit.md)
+- [reviews/final-v1.0-audit.md](reviews/final-v1.0-audit.md)
+- [RELEASE_NOTES_v1.0.0.md](RELEASE_NOTES_v1.0.0.md)
 
 评测入口：
 
@@ -132,10 +136,10 @@ Current status notes:
 Release archives can be generated locally with:
 
 ```bash
-python3 scripts/create_release_archive.py --version v0.9.0
+python3 scripts/create_release_archive.py --version v1.0.0
 ```
 
-The default output path is `dist/zhoulifeng-skill-v0.9.0.zip`. `dist/` is ignored by git and should not be committed.
+The default output path is `dist/zhoulifeng-skill-v1.0.0.zip`. `dist/` is ignored by git and should not be committed.
 
 Archive contents, exclusions, checks, and release-before-publish validation steps are documented in [docs/ARCHIVE_WORKFLOW.md](docs/ARCHIVE_WORKFLOW.md).
 
@@ -187,6 +191,7 @@ python3 scripts/archive_check.py
 python3 scripts/external_review_check.py
 python3 scripts/source_verification_check.py
 python3 scripts/launch_materials_check.py
+python3 scripts/v1_plan_check.py
 python3 quick_validate.py
 python3 tests/run_fidelity_check.py
 ```

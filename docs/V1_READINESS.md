@@ -30,11 +30,21 @@ Stable public release means the Skill is installable, auditable, and clear about
 
 ## Current Blockers
 
-No known blocker for `v1.0.0` final prep after final audit.
+No known blocker for `v1.0.0` stable public release.
+
+## v1.0.0 Release Status
+
+ready for stable public release
+
+P0: 0
+P1: 0
+P2: 7 optional items remain and are non-blocking.
+
+Release notes: `RELEASE_NOTES_v1.0.0.md`
 
 ## v1.0-rc.1 Readiness
 
-ready for final review before rc tag
+completed
 
 P0: 0
 P1: 0
@@ -52,11 +62,11 @@ P2: 7 optional items remain and are not rc.1 release blockers.
 ## P1 Handling Summary
 
 - final validation: fixed locally
-- archive generation: fixed locally for `v1.0.0-rc.1`
+- archive generation: fixed locally for `v1.0.0`
 - README / AUTHORIZATION / launch audit: fixed for rc.1 readiness
 - source verification and candidate model status audit: fixed
 - safety-boundary audit: fixed
-- final v1.0 release notes: downgraded to P2 with reason; they belong to actual v1.0 release prep
+- final v1.0 release notes: fixed in `RELEASE_NOTES_v1.0.0.md`
 - final regression run: deferred with reason and no release blocker; no core Skill/model/safety evaluator changes were made
 
 ## Final v1.0 Audit
@@ -80,3 +90,13 @@ Summary:
 - hard safety boundaries remain unchanged
 - broad external review is not claimed complete
 - public proof is not included at this stage
+
+## Stable Release Notes
+
+v1.0.0 is a stable public release baseline, not a claim of perfect fidelity or broad external review completion.
+
+- candidate models remain candidate
+- X `@zlf86` remains unverified
+- hard safety boundaries remain unchanged
+- public proof is not included at this stage
+- private authorization materials remain excluded from the public repository and archive

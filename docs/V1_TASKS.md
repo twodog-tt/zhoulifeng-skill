@@ -8,7 +8,7 @@ If a safety, authorization, impersonation, privacy, dangerous-content, or privat
 
 ## P1
 
-None remaining for `v1.0.0-rc.1` tag prep.
+None remaining for `v1.0.0` stable public release.
 
 Resolved in rc.1 readiness cleanup:
 
@@ -23,9 +23,9 @@ Resolved in rc.1 readiness cleanup:
 - Confirm X `@zlf86` remains unverified unless independently confirmed: fixed.
 - Confirm hard safety boundaries remain unchanged: fixed.
 
-Downgraded to P2:
+Resolved during final release prep:
 
-- Prepare `RELEASE_NOTES_v1.0.0.md`: defer to actual v1.0 release prep so the notes can reflect final rc findings.
+- Prepare `RELEASE_NOTES_v1.0.0.md`: fixed.
 
 ## P2
 
@@ -36,4 +36,3 @@ Downgraded to P2:
 - Improve launch posts.
 - Add GitHub Discussions launch post.
 - Attach inspected stable package archive to the release if desired.
-- Prepare `RELEASE_NOTES_v1.0.0.md` during actual v1.0 release prep.

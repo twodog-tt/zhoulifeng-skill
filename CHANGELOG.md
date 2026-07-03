@@ -1,5 +1,36 @@
 # Changelog
 
+## [1.0.0] - 2026-07-03
+
+### Added
+
+- Stable public release status.
+- Final v1.0 audit record.
+- Stable archive package validation.
+- Final v1.0 release notes.
+
+### Changed
+
+- Updated README version/status for v1.0.0.
+- Updated v1 readiness docs to mark final release readiness complete.
+
+### Audit
+
+- Final v1.0 audit passed.
+- Archive content audit passed.
+- Install smoke test passed.
+- Public readability review passed.
+- Remaining P2 items confirmed non-blocking.
+
+### Notes
+
+- Candidate models remain candidate.
+- X @zlf86 remains unverified.
+- Hard safety boundaries remain unchanged.
+- Broad external review is not claimed complete.
+- Public proof is not included at this stage.
+- This Skill is not a real-time official statement generator.
+
 ## [1.0.0-rc.1] - 2026-07-03
 
 ### Added
@@ -26,32 +57,6 @@
 - X @zlf86 remains unverified.
 - Hard safety boundaries remain unchanged.
 - This is release-candidate preparation, not v1.0 final.
-
-## [1.0.0] - planning
-
-### Added
-
-- Added v1.0 planning document.
-- Added v1.0 release criteria.
-- Added v1.0 gap analysis.
-- Added v1.0 release checklist.
-- Added v1.0 task plan.
-- Added v1.0 readiness and stable package docs.
-- Added pre-v1.0 audit and model/source audit docs.
-
-### Changed
-
-- Resolved P1 readiness gaps for v1.0-rc.1 tag prep.
-- Documented rc.1 readiness as ready for final review before rc tag.
-- Documented remaining P2 items as non-blocking public polish or release-workflow tasks.
-- Updated stable package docs for `v1.0.0-rc.1` archive generation.
-
-### Notes
-
-- v1.0.0 is not released.
-- Candidate models remain candidate.
-- X `@zlf86` remains unverified.
-- Hard safety boundaries remain unchanged.
 
 ## [0.9.0] - 2026-07-03
 

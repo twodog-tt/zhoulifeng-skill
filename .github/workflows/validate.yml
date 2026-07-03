@@ -40,6 +40,9 @@ jobs:
       - name: Check public demo outputs
         run: python3 scripts/demo_outputs_check.py
 
+      - name: Check archive workflow
+        run: python3 scripts/archive_check.py
+
       - name: Validate skill frontmatter
         run: python3 quick_validate.py
 

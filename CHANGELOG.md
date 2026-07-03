@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.7.0] - unreleased
+
+### Added
+
+- Added launch documentation.
+- Added docs/assets guidance.
+- Added release archive creation script.
+- Added archive validation script.
+
+### Changed
+
+- Expanded archive workflow documentation.
+- Added launch and packaging pointers to README.
+
+### Notes
+
+- No candidate models were upgraded.
+- Hard safety boundaries remain unchanged.
+- v0.7 is not released yet.
+
 ## [0.6.0] - 2026-07-03
 
 ### Added

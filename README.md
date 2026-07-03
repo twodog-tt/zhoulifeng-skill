@@ -21,8 +21,10 @@ v0.6.0 在 v0.5.0 evidence/docs/demo release 的基础上，补充 public demo s
 ## Quick Links
 
 - [Installation](docs/INSTALL.md)
+- [Launch Guide](docs/LAUNCH.md)
 - [Public Demo](examples/public-demo.md)
 - [Public Demo Outputs](examples/public-demo-outputs.md)
+- [Archive Workflow](docs/ARCHIVE_WORKFLOW.md)
 - [Evidence Map](references/evidence/zlf-evidence-map.csv)
 - [Fidelity Report](evals/reports/v0.4-fidelity-report.md)
 - [Authorization](AUTHORIZATION.md)
@@ -65,6 +67,24 @@ v0.6.0 已完成 public readiness、demo outputs、reviewer coverage 和 packagi
 
 hard boundaries 不因授权而放松：不得生成危险旅行、灰产接触、违法边境行动、平台规避、隐私暴露、人肉网暴、露骨内容或长篇原文/字幕搬运。
 
+## Launch / Public Use
+
+Public descriptions should call this an authorized style Skill for Zhou Lifeng / 峰哥亡命天涯-style social observation and commentary drafts. Do not describe it as a real-time official statement generator, a full personality clone, or evidence that candidate models have become verified.
+
+Launch copy, public positioning, demo links, release links, and short post drafts are maintained in [docs/LAUNCH.md](docs/LAUNCH.md).
+
+## Archive / Packaging
+
+Release archives can be generated locally with:
+
+```bash
+python3 scripts/create_release_archive.py --version v0.7.0
+```
+
+The default output path is `dist/zhoulifeng-skill-v0.7.0.zip`. `dist/` is ignored by git and should not be committed.
+
+Archive contents, exclusions, checks, and release-before-publish validation steps are documented in [docs/ARCHIVE_WORKFLOW.md](docs/ARCHIVE_WORKFLOW.md).
+
 ## Authorization Status
 
 本项目现在按授权风格 Skill 维护。授权允许更接近峰哥口吻进行风格草稿、内容分析和二创辅助，但不允许虚构私人事实、实时观点或危险内容。
@@ -106,6 +126,7 @@ python3 scripts/demo_check.py
 python3 scripts/docs_check.py
 python3 scripts/review_check.py
 python3 scripts/demo_outputs_check.py
+python3 scripts/archive_check.py
 python3 quick_validate.py
 python3 tests/run_fidelity_check.py
 ```
@@ -174,9 +195,11 @@ zhoulifeng-skill/
 ├── docs/
 │   ├── ARCHIVE_WORKFLOW.md
 │   ├── INSTALL.md
+│   ├── LAUNCH.md
 │   ├── PACKAGING.md
 │   ├── RUNTIME_COMPATIBILITY.md
-│   └── SCREENSHOTS.md
+│   ├── SCREENSHOTS.md
+│   └── assets/
 ├── .github/
 │   └── workflows/
 │       └── validate.yml
@@ -200,6 +223,8 @@ zhoulifeng-skill/
 │       ├── 07-safety-and-boundaries.md
 │       └── 08-candidate-model-review.md
 ├── scripts/
+│   ├── archive_check.py
+│   ├── create_release_archive.py
 │   ├── demo_check.py
 │   ├── demo_outputs_check.py
 │   ├── docs_check.py

@@ -176,6 +176,21 @@ def validate_demo_outputs_set(skill_dir: Path) -> tuple[bool, str]:
     return True, f"Demo outputs are valid with {demo_count} outputs."
 
 
+def validate_archive_set(skill_dir: Path) -> tuple[bool, str]:
+    scripts_dir = skill_dir / "scripts"
+    if str(scripts_dir) not in sys.path:
+        sys.path.insert(0, str(scripts_dir))
+    try:
+        from archive_check import validate_archive_setup
+    except Exception as exc:  # pragma: no cover - defensive CLI guard
+        return False, f"could not import archive_check: {exc}"
+
+    errors = validate_archive_setup(skill_dir)
+    if errors:
+        return False, "archive setup invalid: " + "; ".join(errors)
+    return True, "Archive setup is valid."
+
+
 def main() -> int:
     skill_dir = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else Path(__file__).resolve().parent
     valid, message = validate_skill(skill_dir)
@@ -210,7 +225,12 @@ def main() -> int:
 
     outputs_valid, outputs_message = validate_demo_outputs_set(skill_dir)
     print(outputs_message)
-    return 0 if outputs_valid else 1
+    if not outputs_valid:
+        return 1
+
+    archive_valid, archive_message = validate_archive_set(skill_dir)
+    print(archive_message)
+    return 0 if archive_valid else 1
 
 
 if __name__ == "__main__":

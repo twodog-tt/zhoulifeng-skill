@@ -1,6 +1,8 @@
 # Archive Workflow
 
-This optional workflow describes how a future release archive could be produced. It is not currently required for releases.
+This workflow describes how to create a local release archive for public packaging review.
+
+The archive is a convenience artifact, not a substitute for GitHub releases, validation logs, or human review.
 
 ## Pre-Archive Checks
 
@@ -15,6 +17,7 @@ python3 scripts/demo_check.py
 python3 scripts/docs_check.py
 python3 scripts/review_check.py
 python3 scripts/demo_outputs_check.py
+python3 scripts/archive_check.py
 python3 quick_validate.py
 python3 tests/run_fidelity_check.py
 ```
@@ -25,6 +28,44 @@ Confirm:
 - Candidate models remain candidate unless a separate evidence review explicitly supports promotion.
 - Hard safety boundaries remain unchanged.
 - No private authorization material is present.
+
+## Create Archive
+
+Run:
+
+```bash
+python3 scripts/create_release_archive.py --version v0.7.0
+```
+
+By default, the archive is written to:
+
+```text
+dist/zhoulifeng-skill-v0.7.0.zip
+```
+
+`dist/` is ignored by git and should not be committed.
+
+Use a different output path only when you have a specific local packaging workflow:
+
+```bash
+python3 scripts/create_release_archive.py --version v0.7.0 --output /tmp/zhoulifeng-skill-v0.7.0.zip
+```
+
+## Archive Checks
+
+Run:
+
+```bash
+python3 scripts/archive_check.py
+```
+
+The checker verifies:
+
+- `scripts/create_release_archive.py` exists.
+- `docs/ARCHIVE_WORKFLOW.md` exists.
+- `.gitignore` contains `dist/`.
+- `.gitignore` contains `.DS_Store`.
+- `dist/` is not tracked by git.
 
 ## Archive Contents
 
@@ -50,6 +91,7 @@ Exclude:
 
 - `.git`
 - `.DS_Store`
+- `dist/`
 - private authorization materials
 - private chats or screenshots
 - raw long subtitles
@@ -59,12 +101,30 @@ Exclude:
 - local caches such as `__pycache__`
 - files containing private data about real interviewees
 
-## Example Command
+Do not upload an archive if it includes:
 
-Example only; review before using:
+- tokens, API keys, secrets, credentials, or `.env` files
+- private authorization screenshots, contracts, chats, or account information
+- raw transcripts, full subtitle exports, or long copied source text
+- private paths or local machine-only files
+- unsafe demo material that teaches dangerous travel, gray-market access, platform evasion, harassment, doxxing, or explicit content
+
+## Release Requirement
+
+Before attaching or publishing any archive, rerun the full validation suite:
 
 ```bash
-git archive --format=zip --output=zhoulifeng-skill-vX.Y.Z.zip HEAD
+python3 scripts/source_index_check.py
+python3 scripts/quality_check.py
+python3 scripts/evidence_check.py
+python3 scripts/eval_run_check.py
+python3 scripts/demo_check.py
+python3 scripts/docs_check.py
+python3 scripts/review_check.py
+python3 scripts/demo_outputs_check.py
+python3 scripts/archive_check.py
+python3 quick_validate.py
+python3 tests/run_fidelity_check.py
 ```
 
-Do not create an archive from a dirty working tree.
+Do not create an archive from a dirty working tree. Do not use a generated archive to imply that candidate models became verified or that hard safety boundaries were relaxed.

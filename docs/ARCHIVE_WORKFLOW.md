@@ -19,6 +19,9 @@ python3 scripts/docs_check.py
 python3 scripts/review_check.py
 python3 scripts/demo_outputs_check.py
 python3 scripts/archive_check.py
+python3 scripts/external_review_check.py
+python3 scripts/source_verification_check.py
+python3 scripts/launch_materials_check.py
 python3 quick_validate.py
 python3 tests/run_fidelity_check.py
 ```
@@ -35,13 +38,13 @@ Confirm:
 Run:
 
 ```bash
-python3 scripts/create_release_archive.py --version v0.7.0
+python3 scripts/create_release_archive.py --version v0.8.0
 ```
 
 By default, the archive is written to:
 
 ```text
-dist/zhoulifeng-skill-v0.7.0.zip
+dist/zhoulifeng-skill-v0.8.0.zip
 ```
 
 `dist/` is ignored by git and should not be committed.
@@ -49,7 +52,7 @@ dist/zhoulifeng-skill-v0.7.0.zip
 Use a different output path only when you have a specific local packaging workflow:
 
 ```bash
-python3 scripts/create_release_archive.py --version v0.7.0 --output /tmp/zhoulifeng-skill-v0.7.0.zip
+python3 scripts/create_release_archive.py --version v0.8.0 --output /tmp/zhoulifeng-skill-v0.8.0.zip
 ```
 
 ## Archive Checks
@@ -67,6 +70,7 @@ The checker verifies:
 - `.gitignore` contains `dist/`.
 - `.gitignore` contains `.DS_Store`.
 - `dist/` is not tracked by git.
+- Required archive directories exist, including `launch/`, `reviews/`, and `references/source-verification/`.
 
 ## Archive Contents
 
@@ -79,9 +83,12 @@ An archive should include:
 - `CHANGELOG.md`
 - `docs/`
 - `examples/`
+- `launch/`
 - `references/evidence/`
 - `references/source-index.csv`
 - `references/research/`
+- `references/source-verification/`
+- `reviews/`
 - `tests/`
 - `scripts/`
 - `agents/openai.yaml`
@@ -125,6 +132,9 @@ python3 scripts/docs_check.py
 python3 scripts/review_check.py
 python3 scripts/demo_outputs_check.py
 python3 scripts/archive_check.py
+python3 scripts/external_review_check.py
+python3 scripts/source_verification_check.py
+python3 scripts/launch_materials_check.py
 python3 quick_validate.py
 python3 tests/run_fidelity_check.py
 ```

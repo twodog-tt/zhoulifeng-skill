@@ -206,6 +206,51 @@ def validate_archive_set(skill_dir: Path) -> tuple[bool, str]:
     return True, "Archive setup is valid."
 
 
+def validate_external_review_set(skill_dir: Path) -> tuple[bool, str]:
+    scripts_dir = skill_dir / "scripts"
+    if str(scripts_dir) not in sys.path:
+        sys.path.insert(0, str(scripts_dir))
+    try:
+        from external_review_check import validate_external_review
+    except Exception as exc:  # pragma: no cover - defensive CLI guard
+        return False, f"could not import external_review_check: {exc}"
+
+    errors = validate_external_review(skill_dir)
+    if errors:
+        return False, "external review scaffolding invalid: " + "; ".join(errors)
+    return True, "External review scaffolding is valid."
+
+
+def validate_source_verification_set(skill_dir: Path) -> tuple[bool, str]:
+    scripts_dir = skill_dir / "scripts"
+    if str(scripts_dir) not in sys.path:
+        sys.path.insert(0, str(scripts_dir))
+    try:
+        from source_verification_check import validate_source_verification
+    except Exception as exc:  # pragma: no cover - defensive CLI guard
+        return False, f"could not import source_verification_check: {exc}"
+
+    errors, row_count = validate_source_verification(skill_dir)
+    if errors:
+        return False, "source verification invalid: " + "; ".join(errors)
+    return True, f"Source verification is valid with {row_count} account rows."
+
+
+def validate_launch_materials_set(skill_dir: Path) -> tuple[bool, str]:
+    scripts_dir = skill_dir / "scripts"
+    if str(scripts_dir) not in sys.path:
+        sys.path.insert(0, str(scripts_dir))
+    try:
+        from launch_materials_check import validate_launch_materials
+    except Exception as exc:  # pragma: no cover - defensive CLI guard
+        return False, f"could not import launch_materials_check: {exc}"
+
+    errors = validate_launch_materials(skill_dir)
+    if errors:
+        return False, "launch materials invalid: " + "; ".join(errors)
+    return True, "Launch materials are valid."
+
+
 def main() -> int:
     skill_dir = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else Path(__file__).resolve().parent
     valid, message = validate_skill(skill_dir)
@@ -250,7 +295,24 @@ def main() -> int:
 
     archive_valid, archive_message = validate_archive_set(skill_dir)
     print(archive_message)
-    return 0 if archive_valid else 1
+    if not archive_valid:
+        return 1
+
+    external_valid, external_message = validate_external_review_set(skill_dir)
+    print(external_message)
+    if not external_valid:
+        return 1
+
+    source_verification_valid, source_verification_message = validate_source_verification_set(
+        skill_dir
+    )
+    print(source_verification_message)
+    if not source_verification_valid:
+        return 1
+
+    launch_valid, launch_message = validate_launch_materials_set(skill_dir)
+    print(launch_message)
+    return 0 if launch_valid else 1
 
 
 if __name__ == "__main__":

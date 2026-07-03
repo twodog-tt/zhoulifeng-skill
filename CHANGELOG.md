@@ -1,5 +1,26 @@
 # Changelog
 
+## [0.8.0] - unreleased
+
+### Added
+
+- Added external reviewer feedback framework.
+- Added source verification workflow for social accounts.
+- Added launch materials for GitHub and X.
+- Added release archive automation coverage for launch, reviews, and source verification materials.
+- Added external review, source verification, and launch-material validation scripts.
+
+### Changed
+
+- Expanded README with launch, external review, source verification, and archive pointers.
+- Expanded archive workflow documentation for v0.8 validation and packaging checks.
+
+### Notes
+
+- No candidate models were upgraded.
+- Hard safety boundaries remain unchanged.
+- v0.8 is not released yet.
+
 ## [0.7.0] - 2026-07-03
 
 ### Added

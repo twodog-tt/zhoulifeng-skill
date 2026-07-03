@@ -1,0 +1,4 @@
+account_id,platform,handle,url,status,verification_basis,used_for,can_enter_verified_models,notes
+ACC-BILI-001,Bilibili,峰哥亡命天涯,https://space.bilibili.com/35847683/,verified,"Matches public Bilibili video sources already indexed as A-level evidence.",verified_model_evidence,yes,"Use public videos and public account content only; do not collect private messages or long transcripts."
+ACC-X-001,X,@zlf86,https://x.com/zlf86,unverified,"Public account located, but no independent repository-level ownership confirmation yet.",candidate_voice_calibration,no,"Can inform candidate lowbrow voice calibration only; must not enter verified models."
+ACC-YT-001,YouTube,unknown,unknown,unverified,"No sufficiently indexed public community/account evidence confirmed in v0.8 prep.",search_lead_only,no,"Search lead only until public account ownership is independently verified."

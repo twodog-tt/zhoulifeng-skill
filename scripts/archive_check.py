@@ -8,6 +8,20 @@ import sys
 from pathlib import Path
 
 
+REQUIRED_ARCHIVE_DIRS = [
+    "agents",
+    "docs",
+    "examples",
+    "launch",
+    "references/evidence",
+    "references/research",
+    "references/source-verification",
+    "reviews",
+    "tests",
+    "scripts",
+]
+
+
 def validate_archive_setup(root: Path) -> list[str]:
     errors: list[str] = []
 
@@ -18,6 +32,10 @@ def validate_archive_setup(root: Path) -> list[str]:
     workflow_doc = root / "docs" / "ARCHIVE_WORKFLOW.md"
     if not workflow_doc.is_file():
         errors.append("docs/ARCHIVE_WORKFLOW.md is missing")
+
+    for rel_path in REQUIRED_ARCHIVE_DIRS:
+        if not (root / rel_path).is_dir():
+            errors.append(f"archive required directory missing: {rel_path}")
 
     gitignore = root / ".gitignore"
     if not gitignore.is_file():

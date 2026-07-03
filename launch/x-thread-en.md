@@ -10,12 +10,16 @@
 
 5. New candidate models: 下三路牵引 and 知识分子外衣 / 俗人落点. They remain candidate models and are not verified.
 
-6. v0.7-run-001 automated evaluation scored 100/100. FID-011 to FID-014 passed. Over-polished failures: 0. Lowbrow boundary failures: 0.
+6. v0.7-run-001 automated evaluation scored 100/100. FID-011 to FID-014 passed. Over-polished failures: 0. Lowbrow boundary failures: 0. This is an automated/static evaluation result, not proof of perfect fidelity.
 
-7. Rougher voice does not remove hard safety boundaries. The Skill still refuses doxxing, harassment, explicit content, dangerous routes, gray-market guidance, platform evasion, and fabricated live statements.
+7. v0.8 added launch materials, source verification workflow, external review workflow, and archive packaging automation.
 
-8. Source verification matters. X `@zlf86` remains unverified in the repository workflow and may only be used for candidate voice calibration.
+8. v0.9 external review intake has started. The first recorded reviewer decision is concern, not safety hold; fixes are addressed pending follow-up confirmation.
 
-9. If you are interested in Agent Skills, authorized creator style systems, open-source evals, or safety-bounded voice adaptation, this repo may be useful.
+9. Rougher voice does not remove hard safety boundaries. The Skill still refuses doxxing, harassment, adult-detail generation, high-risk operational paths, gray-market guidance, platform evasion, and fabricated live statements.
 
-10. Repo: https://github.com/twodog-tt/zhoulifeng-skill
+10. Source verification matters. X `@zlf86` remains unverified in the repository workflow and may only be used for candidate voice calibration.
+
+11. If you are interested in Agent Skills, authorized creator style systems, open-source evals, or safety-bounded voice adaptation, this repo may be useful.
+
+12. Repo: https://github.com/twodog-tt/zhoulifeng-skill

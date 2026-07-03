@@ -16,9 +16,11 @@ v0.7 introduced lowbrow / anti-polish calibration:
 - lowbrow boundary failure checks
 - expanded demo outputs
 
-The v0.7-run-001 automated evaluation scored `100/100`, and the lightweight human review passed.
+The v0.7-run-001 automated evaluation scored `100/100`, and the lightweight human review passed. This is an automated/static evaluation result, not proof of perfect fidelity.
 
-v0.8 added launch materials, an external reviewer workflow, source verification workflow, and archive packaging automation. External review is prepared, not completed.
+v0.8 added launch materials, an external reviewer workflow, source verification workflow, and archive packaging automation.
+
+v0.9 external review intake has started. The first recorded reviewer decision is `concern`, not safety hold; fixes are addressed pending follow-up reviewer confirmation.
 
 ## What This Project Is
 

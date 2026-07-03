@@ -2,6 +2,6 @@
 
 v0.8 在 lowbrow / anti-polish calibration 之后，补上 launch materials、external review workflow、source verification workflow 和 archive packaging automation。
 
-不是实时官方声明生成器。external review 仍是 prepared, not completed。candidate models remain candidate。hard safety boundaries 不变。X `@zlf86` remains unverified。
+不是实时官方声明生成器。v0.9 已录入第一条 external reviewer concern，不是 safety hold，当前修复已处理待复核。candidate models remain candidate。hard safety boundaries 不变。X `@zlf86` remains unverified。
 
 https://github.com/twodog-tt/zhoulifeng-skill

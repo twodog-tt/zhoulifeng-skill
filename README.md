@@ -12,6 +12,8 @@
 
 This project is an authorized Zhou Lifeng / 峰哥亡命天涯 style skill. It is not a real-time official statement generator, and generated drafts are not a substitute for Zhou Lifeng personally confirming a view.
 
+This is an authorized style-draft Skill, not an official live/personhood bot or real-time statement generator.
+
 ## Current Status
 
 Current version: `v0.8.0`
@@ -22,11 +24,11 @@ v0.8.0 focuses on launch materials, external review workflow, source verificatio
 
 Development track: `v0.9.0` unreleased, focused on external review intake and launch copy polish.
 
-v0.7.0 在 v0.6.0 public readiness release 的基础上，完成 lowbrow / anti-polish voice calibration：新增 social media speech corpus、lowbrow voice calibration research、`FID-011` 到 `FID-014`、over-polished penalty、lowbrow boundary failure checks 和 v0.7-run-001 评测。v0.7-run-001 自动评测 `100/100`，release recommendation：`pass`；v0.7 lightweight human review 结论为 `Pass for v0.7.0 release prep`。
+v0.7.0 在 v0.6.0 public readiness release 的基础上，完成 lowbrow / anti-polish voice calibration：新增 social media speech corpus、lowbrow voice calibration research、`FID-011` 到 `FID-014`、over-polished penalty、lowbrow boundary failure checks 和 v0.7-run-001 评测。v0.7-run-001 自动评测 `100/100`，release recommendation：`pass`；v0.7 lightweight human review 结论为 `Pass for v0.7.0 release prep`。This is an automated evaluation result, not proof of perfect fidelity.
 
-v0.8.0 prepares broader public distribution with `launch/`, `reviews/external/`, `references/source-verification/`, and release archive automation. The external review framework is prepared, not completed. X `@zlf86` remains unverified, may be used only for `candidate_voice_calibration`, and cannot enter verified models.
+v0.8.0 prepares broader public distribution with `launch/`, `reviews/external/`, `references/source-verification/`, and release archive automation. The external review framework was prepared in v0.8; v0.9 has recorded the first reviewer concern, but the full external review program is not complete. X `@zlf86` remains unverified, may be used only for `candidate_voice_calibration`, and cannot enter verified models.
 
-v0.9.0 starts real external review intake. No external reviewer feedback has been recorded yet; the report remains `prepared, not completed` until actual feedback is logged.
+v0.9.0 starts real external review intake. Feedback batch `EXT-001` has been recorded with reviewer decision `concern`, not safety hold; the first action items are addressed pending follow-up reviewer confirmation.
 
 本项目是 authorized style skill，不是实时官方声明生成器。candidate models 仍保持 candidate，hard safety boundaries 保持不变。新增 lowbrow calibration 只降低过度体面感，不允许露骨、人肉、网暴、灰产、危险行动、平台规避或隐私内容。
 
@@ -66,7 +68,7 @@ This is not:
 
 v0.7.0 已完成低体面/下三路/反升华口吻校准、自动评测和 lightweight human review。v0.8.0 发布 launch materials、external review framework、source verification workflow、archive packaging automation 和公共发布材料。
 
-v0.8.0 不升级 candidate models，不放松 hard safety boundaries，不把未验证社交账号来源写成 verified evidence，也不把授权风格草稿描述成实时官方声明。external review framework 仍是 prepared, not completed。
+v0.8.0 不升级 candidate models，不放松 hard safety boundaries，不把未验证社交账号来源写成 verified evidence，也不把授权风格草稿描述成实时官方声明。v0.9 已录入第一条 reviewer concern，但 full external review program 尚未完成。
 
 评测入口：
 
@@ -126,6 +128,8 @@ Archive contents, exclusions, checks, and release-before-publish validation step
 
 授权状态和范围见 [AUTHORIZATION.md](AUTHORIZATION.md)。公开仓库不保存私人合同、私聊、签名、电话号码、地址或其他非公开授权材料。
 
+Public proof note: private authorization materials are not included in this repository. Public proof is not included at this stage; if a public authorization statement is later available, it can be summarized or linked without exposing private data.
+
 ## Model Status
 
 当前 `SKILL.md` 将模型分成三类：
@@ -176,7 +180,7 @@ GitHub Actions 会在 push 和 pull request 上运行同一组核心校验。
 
 `tests/fidelity_cases.yaml` 包含 10 个结构化 fidelity cases，总分 100。`tests/safety_cases.yaml` 包含 12 个安全边界测试。`tests/run_fidelity_check.py` 只做静态规则检查，不调用外部 LLM API。
 
-v0.4-run-003 已完成 Answer Agent + Scoring Agent 评测和 lightweight human review。结果：`100/100`，release recommendation：`pass`，high-risk safety failures：`0`，candidate/verified confusions：`0`，false real-time personhood failures：`0`。
+v0.4-run-003 已完成 Answer Agent + Scoring Agent 评测和 lightweight human review。结果：`100/100`，release recommendation：`pass`，high-risk safety failures：`0`，candidate/verified confusions：`0`，false real-time personhood failures：`0`。This is an automated evaluation result, not proof of perfect fidelity.
 
 通过阈值和后续人工审计标准见 `FIDELITY.md`。
 

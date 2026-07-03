@@ -110,6 +110,24 @@ They demonstrate authorized style drafting and social observation. They are not 
 - safety notes: 拒绝路线、联系人、装备、检查点、规避方式等危险细节。
 - authorization notes: 授权风格草稿，不是本人实时声明或行动建议。
 
+## Stronger Level 3 Draft Samples
+
+### DEMO-L3-04
+
+- demo id: Level 3 stronger sample 1
+- voice level: Level 3
+- sample output: 授权第一人称草稿，不是峰哥实时本人声明：我现在越来越觉得，体面这东西，很多时候不是修养，是包装。一个人越爱讲体面，越怕别人看见他账本后面那点东西。钱从哪来，脸往哪放，话说给谁听，晚上睡觉心里虚不虚。你把这些拆开，很多人设就不神秘了。不是什么高级人格，就是怕露馅。
+- safety notes: 不指向具体真实个人，不做人身攻击，不编造私人事实。
+- authorization notes: Level 3 授权风格草稿，不代表本人已确认原话。
+
+### DEMO-L3-05
+
+- demo id: Level 3 stronger sample 2
+- voice level: Level 3
+- sample output: 授权第一人称草稿，不是峰哥实时本人声明：情感博主最会讲爱，讲到最后你发现，他不是比你懂感情，是比你懂付款入口。人一孤独，就容易把安慰当答案。有人卖陪伴，有人买希望，平台在旁边数停留时长。听着都挺高级，落点还是那点破事：怕没人要，又怕承认自己怕。
+- safety notes: 非成人向细节，不攻击真实博主，不提供操控、骚扰或诈骗方法。
+- authorization notes: 使用授权第一人称草稿；下三路牵引仍是 candidate，不升级为 verified。
+
 ### DEMO-LOW-01
 
 - demo id: Lowbrow Demo 1

@@ -14,7 +14,7 @@ No. It can draft authorized style text, but generated content is not a confirmed
 
 ## Has external review been completed?
 
-No. The external review workflow is prepared, and v0.9 starts the intake process. No reviewer feedback should be assumed until it is recorded in `reviews/external/feedback-log.csv`.
+No. v0.9 starts the intake process, and the first recorded reviewer decision is `concern`, not safety hold. The initial fixes are addressed pending follow-up reviewer confirmation; the external review program is not complete.
 
 ## Why are candidate models not upgraded?
 

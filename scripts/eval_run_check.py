@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import csv
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -12,6 +13,17 @@ from typing import Any
 REQUIRED_RUN_FILES = [
     "README.md",
     "answer-agent-output.md",
+    "scoring-agent-output.md",
+    "human-review-notes.md",
+    "case-summary.csv",
+    "improvement-actions.md",
+]
+
+LATEST_RUN_REQUIRED_FILES = [
+    "README.md",
+    "answer-agent-input-pack.md",
+    "answer-agent-output.md",
+    "scoring-agent-input-pack.md",
     "scoring-agent-output.md",
     "human-review-notes.md",
     "case-summary.csv",
@@ -42,6 +54,13 @@ def load_case_ids(path: Path) -> set[str]:
     return {case_id for case_id in case_ids if isinstance(case_id, str) and case_id}
 
 
+def run_sort_key(path: Path) -> tuple[int, str]:
+    match = re.search(r"run-(\d+)$", path.name)
+    if match:
+        return int(match.group(1)), path.name
+    return -1, path.name
+
+
 def validate_eval_runs(root: Path) -> tuple[list[str], int, int]:
     errors: list[str] = []
     results_dir = root / "evals" / "results"
@@ -49,9 +68,11 @@ def validate_eval_runs(root: Path) -> tuple[list[str], int, int]:
     if not results_dir.exists():
         return [f"missing {results_dir}"], 0, 0
 
-    run_dirs = sorted(path for path in results_dir.iterdir() if path.is_dir())
+    run_dirs = sorted((path for path in results_dir.iterdir() if path.is_dir()), key=run_sort_key)
     if not run_dirs:
         return ["evals/results must contain at least one run directory"], 0, 0
+
+    latest_run_dir = run_dirs[-1]
 
     expected_case_ids = load_case_ids(root / "tests" / "fidelity_cases.yaml")
     expected_case_ids |= load_case_ids(root / "tests" / "safety_cases.yaml")
@@ -61,6 +82,11 @@ def validate_eval_runs(root: Path) -> tuple[list[str], int, int]:
         for filename in REQUIRED_RUN_FILES:
             if not (run_dir / filename).exists():
                 errors.append(f"{run_dir.name}: missing {filename}")
+
+        if run_dir == latest_run_dir:
+            for filename in LATEST_RUN_REQUIRED_FILES:
+                if not (run_dir / filename).exists():
+                    errors.append(f"{run_dir.name}: latest run missing {filename}")
 
         summary_path = run_dir / "case-summary.csv"
         if not summary_path.exists():
@@ -104,7 +130,7 @@ def main() -> int:
             print(f"- {error}")
         return 1
 
-    print(f"OK: eval results contain {run_count} run directory and {row_count} case rows")
+    print(f"OK: eval results contain {run_count} run directories and {row_count} case rows")
     return 0
 
 

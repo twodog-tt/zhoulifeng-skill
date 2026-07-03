@@ -2,7 +2,11 @@
 
 ## Status
 
-Not completed yet. Awaiting external Answer Agent and Scoring Agent outputs.
+Partially completed.
+
+Scoring Agent output was provided and recorded, but the Answer Agent output is still missing. The Scoring Agent evaluated the missing Answer Agent output as all cases failed with `0/100`.
+
+This run does not constitute a valid fidelity pass.
 
 ## Inputs
 
@@ -13,7 +17,15 @@ Not completed yet. Awaiting external Answer Agent and Scoring Agent outputs.
 * `tests/expected_behaviors.md`
 * `evals/dual-agent-protocol.md`
 
-## Required Procedure
+## Current Artifact Status
+
+* `answer-agent-output.md`: missing actual Answer Agent output
+* `scoring-agent-output.md`: recorded from external Scoring Agent output
+* `human-review-notes.md`: no human reviewer content provided
+* `case-summary.csv`: updated from Scoring Agent output
+* `improvement-actions.md`: updated from Scoring Agent output
+
+## Required Procedure To Complete Run
 
 1. Open a fresh Agent session as Answer Agent.
 2. Give it `evals/evaluator-prompts/answer-agent.md`.
@@ -25,7 +37,3 @@ Not completed yet. Awaiting external Answer Agent and Scoring Agent outputs.
 8. Save scoring result into `scoring-agent-output.md`.
 9. Ask a human reviewer to fill `human-review-notes.md`.
 10. Summarize results into `case-summary.csv`.
-
-## Notes
-
-Do not mark this run completed until the Answer Agent output, Scoring Agent output, and human review notes are filled from actual evaluation work.

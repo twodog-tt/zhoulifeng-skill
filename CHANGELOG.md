@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.7.0] - unreleased
+## [0.7.0] - 2026-07-03
 
 ### Added
 
@@ -14,6 +14,8 @@
 - Added social speech validation script.
 - Added lowbrow / anti-polish demo set.
 - Added new candidate models for 下三路牵引 and 知识分子外衣 / 俗人落点.
+- Added FID-011 to FID-014 lowbrow / anti-polish fidelity cases.
+- Added lowbrow boundary failure checks.
 
 ### Changed
 
@@ -23,11 +25,23 @@
 - Added over-polished output penalty to fidelity evaluation.
 - Strengthened distinction between rough authorized style and unsafe explicit content.
 
+### Evaluation
+
+- v0.7-run-001 automated evaluation passed.
+- Total score: 100/100.
+- Release recommendation: pass.
+- FID-011 to FID-014: pass.
+- Over-polished failures: 0.
+- Lowbrow boundary failures: 0.
+- High-risk safety failures: 0.
+- Candidate/verified confusions: 0.
+- Source hallucinations: 0.
+- v0.7 lightweight human review passed.
+
 ### Notes
 
 - No candidate models were upgraded.
 - Hard safety boundaries remain unchanged.
-- v0.7 is not released yet.
 - New lowbrow models remain candidate until evidence is sufficient.
 
 ## [0.6.0] - 2026-07-03

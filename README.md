@@ -14,13 +14,13 @@ This project is an authorized Zhou Lifeng / 峰哥亡命天涯 style skill. It i
 
 ## Current Status
 
-Current version: `v0.6.0`
+Current version: `v0.7.0`
 
-Status: Public readiness and reviewer coverage release
+Status: Lowbrow voice calibration release
 
-v0.6.0 在 v0.5.0 evidence/docs/demo release 的基础上，补充 public demo sample outputs、human reviewer audit 体系、README badges、截图安全说明和 archive workflow 文档。v0.6 lightweight human review 结论为 `Pass for v0.6.0 release prep`。
+v0.7.0 在 v0.6.0 public readiness release 的基础上，完成 lowbrow / anti-polish voice calibration：新增 social media speech corpus、lowbrow voice calibration research、`FID-011` 到 `FID-014`、over-polished penalty、lowbrow boundary failure checks 和 v0.7-run-001 评测。v0.7-run-001 自动评测 `100/100`，release recommendation：`pass`；v0.7 lightweight human review 结论为 `Pass for v0.7.0 release prep`。
 
-本项目是 authorized style skill，不是实时官方声明生成器。candidate models 仍保持 candidate，hard safety boundaries 保持不变。
+本项目是 authorized style skill，不是实时官方声明生成器。candidate models 仍保持 candidate，hard safety boundaries 保持不变。新增 lowbrow calibration 只降低过度体面感，不允许露骨、人肉、网暴、灰产、危险行动、平台规避或隐私内容。
 
 ## Quick Links
 
@@ -51,9 +51,9 @@ This is not:
 - permission to provide dangerous travel, gray-market access, privacy exposure, doxxing, harassment, explicit content, platform evasion, or long transcript copying
 - evidence that candidate models have become verified
 
-## v0.7 Roadmap
+## v0.8 Roadmap
 
-v0.6.0 已完成 public readiness、demo outputs、reviewer coverage 和 packaging safety documentation。v0.7 建议继续做可选安装截图、demo 输出截图、archive automation、更广覆盖外部 reviewer 审计和 GitHub / X 公共发布材料。
+v0.7.0 已完成低体面/下三路/反升华口吻校准、自动评测和 lightweight human review。v0.8 建议继续做外部 reviewer feedback、更多 verified social speech sources、可选安装截图、launch assets、archive packaging automation 和公共发布材料。
 
 评测入口：
 

@@ -10,11 +10,11 @@ This project is an authorized Zhou Lifeng / 峰哥亡命天涯 style skill. It i
 
 ## Current Status
 
-Current version: `v0.5.0`
+Current version: `v0.6.0`
 
-Status: Evidence depth, packaging, and public demo release
+Status: Public readiness and reviewer coverage release
 
-v0.5.0 在 v0.4.0 授权口吻评测通过的基础上，补强 evidence map、evidence notes、安装/打包/runtime 文档和 Public Demo Set。v0.4-run-003 评分为 `100/100`，release recommendation 为 `pass`。
+v0.6.0 在 v0.5.0 evidence/docs/demo release 的基础上，补充 public demo sample outputs、human reviewer audit 体系、README badges、截图安全说明和 archive workflow 文档。v0.6 lightweight human review 结论为 `Pass for v0.6.0 release prep`。
 
 本项目是 authorized style skill，不是实时官方声明生成器。candidate models 仍保持 candidate，hard safety boundaries 保持不变。
 
@@ -45,9 +45,9 @@ This is not:
 - permission to provide dangerous travel, gray-market access, privacy exposure, doxxing, harassment, explicit content, platform evasion, or long transcript copying
 - evidence that candidate models have become verified
 
-## v0.6 Roadmap
+## v0.7 Roadmap
 
-v0.5.0 已完成 evidence depth、packaging docs 和 public demo release。v0.6 建议继续做更广覆盖的人类 reviewer 审计、示例输出、安装截图、README badges 和可选 package/archive workflow。
+v0.6.0 已完成 public readiness、demo outputs、reviewer coverage 和 packaging safety documentation。v0.7 建议继续做可选安装截图、demo 输出截图、archive automation、更广覆盖外部 reviewer 审计和 GitHub / X 公共发布材料。
 
 评测入口：
 

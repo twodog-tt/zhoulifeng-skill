@@ -6,6 +6,7 @@
 
 - Added launch documentation.
 - Added docs/assets guidance.
+- Added public pixel portrait launch asset.
 - Added release archive creation script.
 - Added archive validation script.
 

@@ -4,6 +4,10 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Validate](https://github.com/twodog-tt/zhoulifeng-skill/actions/workflows/validate.yml/badge.svg)](https://github.com/twodog-tt/zhoulifeng-skill/actions/workflows/validate.yml)
 
+<p align="center">
+  <img src="docs/assets/pixel-feng.png" alt="Pixel portrait for zhoulifeng-skill" width="360">
+</p>
+
 一个授权维护的“峰哥亡命天涯式社会观察与口吻草稿” Agent Skill。
 
 This project is an authorized Zhou Lifeng / 峰哥亡命天涯 style skill. It is not a real-time official statement generator, and generated drafts are not a substitute for Zhou Lifeng personally confirming a view.

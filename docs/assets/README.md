@@ -4,6 +4,7 @@ This directory is for public-facing launch and validation screenshots.
 
 Recommended files:
 
+- `pixel-feng.png`
 - `install-check.png`
 - `validation-pass.png`
 - `demo-level-2.png`
@@ -18,6 +19,7 @@ Screenshots should show only public, non-sensitive project material:
 - public demo prompts and outputs
 - safety-boundary demo behavior
 - public release or repository pages
+- public launch portraits or visual identity assets
 
 ## Do Not Commit
 

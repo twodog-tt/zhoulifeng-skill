@@ -14,7 +14,7 @@ No. It can draft authorized style text, but generated content is not a confirmed
 
 ## Has external review been completed?
 
-No. v0.9 starts the intake process, and the first recorded reviewer decision is `concern`, not safety hold. The initial fixes are addressed pending follow-up reviewer confirmation; the external review program is not complete.
+No. v0.9 starts the intake process. The first recorded reviewer decision is `concern`, not safety hold, and `EXT-001-FUP` records a follow-up `pass` for the addressed concern. The broader external review program is not complete.
 
 ## Why are candidate models not upgraded?
 

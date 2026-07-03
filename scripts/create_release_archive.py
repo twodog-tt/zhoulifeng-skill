@@ -92,6 +92,10 @@ def iter_archive_files(root: Path) -> list[Path]:
             raise FileNotFoundError(f"required file missing: {relative}")
         files.append(path)
 
+    for path in sorted(root.glob("RELEASE_NOTES*.md")):
+        if path.is_file() and not is_excluded(path.relative_to(root)):
+            files.append(path)
+
     for relative in REQUIRED_DIRS:
         directory = root / relative
         if not directory.is_dir():

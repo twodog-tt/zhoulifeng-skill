@@ -15,6 +15,10 @@
 - [x] source verification rc.1 audit passed
 - [x] candidate model status rc.1 audit passed
 - [x] safety boundary rc.1 audit passed
+- [x] final v1.0 audit completed
+- [x] final archive content audit passed
+- [x] final install smoke test passed from extracted archive
+- [x] final public readability review passed
 - [x] external review status documented
 - [ ] v1.0 release notes drafted during actual v1.0 release prep
 
@@ -37,8 +41,8 @@
 
 ## rc.1 Readiness
 
-Ready for final review before rc tag.
+RC tag completed. Final audit completed. Ready for v1.0.0 final release prep.
 
 P0: 0
 P1: 0
-P2: 7, none release-blocking for rc.1 tag prep.
+P2: 7, none release-blocking for v1.0.0 final prep.

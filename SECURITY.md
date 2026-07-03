@@ -1,39 +1,72 @@
-# Security Policy
+# 安全政策
 
-This project is maintained as an authorized Zhou Lifeng / 峰哥亡命天涯 style Skill. Authorization supports style drafting and content analysis; it does not make model output a verified real-time personal statement from Zhou Lifeng.
+本项目是授权维护的 Zhou Lifeng / 峰哥亡命天涯 style Skill。授权支持风格草稿和内容分析，但不代表模型输出就是周丽峰本人实时确认的真实声明。
 
-## Reporting Security Issues
+## 如何报告安全问题
 
-If you find a safety issue, open a GitHub issue with:
+如果你发现安全问题，请开 GitHub issue，并尽量包含：
 
-- The file and line involved.
-- The risky prompt or behavior.
-- Why it violates the project boundaries.
-- A safer alternative, if you have one.
+- 涉及的文件和行号。
+- 触发风险的 prompt 或行为描述。
+- 为什么它违反项目边界。
+- 如果你有建议，请给出更安全的替代方向。
 
-Do not include private information, doxxing material, leaked messages, or dangerous operational details in the report.
+不要在 issue 中提交私人信息、人肉材料、泄露聊天、危险操作细节、灰产联系方式、平台规避教程或露骨内容。
 
-## What Counts as a Security Issue
+## 什么算安全问题
 
-Security issues include:
+以下都属于安全问题：
 
-- Presenting generated drafts as Zhou Lifeng's verified real-time personal statements.
-- Fabricating personal views, private facts, income, location, relationships, commitments, plans, controversy responses, or platform inside information.
-- Revealing or encouraging collection of private information about real people.
-- Doxxing, harassment, dogpiling, or targeted humiliation.
-- Dangerous travel, border action, gray-market contact, war-zone, or illegal activity guidance.
-- Platform ban evasion or moderation bypass instructions.
-- Explicit sexual content, especially involving real people or minors.
-- Large-scale copyright copying of transcripts, subtitles, articles, or interviews.
-- Turning controversy rumors into asserted facts.
-- Treating candidate models as verified.
+- 把生成草稿说成周丽峰本人实时确认的声明。
+- 虚构本人观点、私人事实、收入、行踪、关系、承诺、计划、争议回应或平台内部信息。
+- 泄露、收集或鼓励整理真实个人隐私。
+- 人肉、网暴、挂人、羞辱真实个人。
+- 危险旅行、边境行动、战区行动、灰产接触或违法活动指南。
+- 平台封禁规避、审核绕过、风控对抗教程。
+- 露骨色情内容，尤其涉及真实人物或未成年人。
+- 大段搬运字幕、访谈、文章或评论。
+- 把争议传闻写成确定事实。
+- 把 candidate model 当成 verified 使用。
+- 暗示 X `@zlf86` 已验证，或把它用于 verified model。
 
-## Scope
+## 项目处理范围
 
-We handle safety issues in this repository's Skill instructions, tests, references, and examples. We do not process requests for private information about 周丽峰, interview subjects, contributors, or third parties.
+我们处理本仓库里的安全问题，包括：
 
-Do not submit private authorization materials, contracts, chat logs, signatures, phone numbers, addresses, or other non-public evidence in security reports.
+- `SKILL.md`
+- tests
+- examples
+- references
+- docs
+- launch materials
+- release notes
 
-## Preferred Fix Pattern
+我们不处理关于周丽峰、受访者、贡献者或第三方的私人信息请求。
 
-Fixes should add source-aware boundaries, safer alternatives, and test coverage. If a risky behavior is found in `SKILL.md`, add or update a matching case in `tests/safety_cases.yaml`.
+请不要提交私人授权材料、合同、聊天记录、签名、电话号码、地址或其他非公开证据。
+
+## 推荐修复方式
+
+好的安全修复通常包括：
+
+- 把风险边界写得更清楚。
+- 给出安全替代方向。
+- 增加或更新 `tests/safety_cases.yaml`。
+- 更新 `tests/expected_behaviors.md`。
+- 如果风险来自 `SKILL.md`，同步更新示例拒绝和回答协议。
+
+拒绝可以短、冷、现实一点，不需要写成道德作文；但硬边界不能松。
+
+## 不要这样报告
+
+请不要提交：
+
+- 私聊截图。
+- 私人授权证明。
+- 未公开身份信息。
+- 真实个人住址、电话、证件信息。
+- 危险路线、联系人、操作细节。
+- 平台规避步骤。
+- 长字幕、长访谈、长文章原文。
+
+如果你需要说明风险，用概述、脱敏样例和最小必要上下文即可。

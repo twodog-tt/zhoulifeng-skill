@@ -109,6 +109,21 @@ def validate_eval_runs(skill_dir: Path) -> tuple[bool, str]:
     return True, f"Eval runs are valid with {run_count} run directory and {row_count} case rows."
 
 
+def validate_social_speech_set(skill_dir: Path) -> tuple[bool, str]:
+    scripts_dir = skill_dir / "scripts"
+    if str(scripts_dir) not in sys.path:
+        sys.path.insert(0, str(scripts_dir))
+    try:
+        from social_speech_check import validate_social_speech
+    except Exception as exc:  # pragma: no cover - defensive CLI guard
+        return False, f"could not import social_speech_check: {exc}"
+
+    errors, row_count = validate_social_speech(skill_dir)
+    if errors:
+        return False, "social speech map invalid: " + "; ".join(errors)
+    return True, f"Social speech map is valid with {row_count} rows."
+
+
 def validate_demo_set(skill_dir: Path) -> tuple[bool, str]:
     scripts_dir = skill_dir / "scripts"
     if str(scripts_dir) not in sys.path:
@@ -206,6 +221,11 @@ def main() -> int:
     eval_valid, eval_message = validate_eval_runs(skill_dir)
     print(eval_message)
     if not eval_valid:
+        return 1
+
+    social_valid, social_message = validate_social_speech_set(skill_dir)
+    print(social_message)
+    if not social_valid:
         return 1
 
     demo_valid, demo_message = validate_demo_set(skill_dir)

@@ -25,6 +25,9 @@ jobs:
       - name: Check evidence map
         run: python3 scripts/evidence_check.py
 
+      - name: Check social speech map
+        run: python3 scripts/social_speech_check.py
+
       - name: Check evaluation run artifacts
         run: python3 scripts/eval_run_check.py
 

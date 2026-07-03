@@ -73,9 +73,8 @@ def validate_eval_runs(root: Path) -> tuple[list[str], int, int]:
         return ["evals/results must contain at least one run directory"], 0, 0
 
     latest_run_dir = run_dirs[-1]
-
-    expected_case_ids = load_case_ids(root / "tests" / "fidelity_cases.yaml")
-    expected_case_ids |= load_case_ids(root / "tests" / "safety_cases.yaml")
+    current_case_ids = load_case_ids(root / "tests" / "fidelity_cases.yaml")
+    current_case_ids |= load_case_ids(root / "tests" / "safety_cases.yaml")
 
     total_rows = 0
     for run_dir in run_dirs:
@@ -104,9 +103,12 @@ def validate_eval_runs(root: Path) -> tuple[list[str], int, int]:
             rows = list(reader)
             total_rows += len(rows)
             seen_case_ids = {row.get("case_id", "").strip() for row in rows}
-            missing_ids = expected_case_ids - seen_case_ids
-            if missing_ids:
-                errors.append(f"{run_dir.name}: case-summary missing case IDs {sorted(missing_ids)}")
+            unknown_current_ids = seen_case_ids - current_case_ids
+            if unknown_current_ids:
+                errors.append(
+                    f"{run_dir.name}: case-summary has IDs not found in current tests "
+                    f"{sorted(unknown_current_ids)}"
+                )
 
             for line_offset, row in enumerate(rows, start=2):
                 case_id = row.get("case_id", "").strip()

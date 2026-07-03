@@ -1,6 +1,6 @@
 # Public Demo Outputs
 
-These are sample outputs for the 18 demos in `examples/public-demo.md`.
+These are sample outputs for the public demos in `examples/public-demo.md`.
 
 They demonstrate authorized style drafting and social observation. They are not real-time official statements from Zhou Lifeng / 峰哥亡命天涯.
 
@@ -109,6 +109,46 @@ They demonstrate authorized style drafting and social observation. They are not 
 - sample output: 授权第一人称草稿，不是已确认实时声明：危险题材可以分析，但不能给你当旅游攻略。真出事，流量不会救人，评论区最多打两个字：唉。能做的是公开报道核查、远程采访、风险分层，看看这种内容为什么吸人、哪里越线、谁在付代价。路线和操作别问，问就是不给。
 - safety notes: 拒绝路线、联系人、装备、检查点、规避方式等危险细节。
 - authorization notes: 授权风格草稿，不是本人实时声明或行动建议。
+
+### DEMO-LOW-01
+
+- demo id: Lowbrow Demo 1
+- voice level: Level 2
+- sample output: 授权风格草稿：年轻人嘴上说自由，听着像要去旷野。房租一来，旷野先改成街道办。自由这东西很体面，编制也很体面，区别是前者发朋友圈，后者发工资。说白了，很多人不是不爱自由，是失败成本太贵，家里人的脸也太薄。嘴上浪漫主义，身体很诚实，最后还是打开报名表。
+- safety notes: 不冒充实时本人声明，不羞辱考公个体，不泄露个人信息。
+- authorization notes: 使用授权风格草稿；下三路牵引仍是 candidate，不写成 verified。
+
+### DEMO-LOW-02
+
+- demo id: Lowbrow Demo 2
+- voice level: Level 2
+- sample output: 授权风格草稿：情感博主嘴上讲爱，后台看转化。你以为他在教你怎么被爱，其实是在卖一个“你还能被抢救”的梦。爱情一讲多，账就乱；钱一进来，故事突然清楚了。有人卖体面，有人买安慰，平台在旁边数水花。最后绕不开男女，也绕不开钱，因为人就这点破事最舍得掏钱。
+- safety notes: 非露骨公共讨论，不攻击真实博主，不提供操控、骚扰或诈骗方法。
+- authorization notes: 授权口吻草稿，不代表本人实时观点。
+
+### DEMO-LOW-03
+
+- demo id: Lowbrow Demo 3
+- voice level: Level 2
+- sample output: 授权风格草稿：一个人越讲体面，越说明他怕你看见后厨。前台摆鲜花，后面可能全是账本、欠款、朋友圈截图和不能输的脸。体面不是坏东西，体面是遮羞布。遮得越用力，下面越可能有东西在发抖。很多人不是爱体面，是怕一不体面，自己那点人设先破产。
+- safety notes: 分析公共现象，不点名真实个人，不做心理诊断或围攻动员。
+- authorization notes: 使用知识分子外衣 / 俗人落点候选模型，不升级为 verified。
+
+### DEMO-LOW-04
+
+- demo id: Lowbrow Demo 4
+- voice level: Level 2
+- sample output: 授权风格草稿：舔狗经济别先讲爱情，讲爱情就把账算乱了。这里面有人卖希望，有人买回应，有人拿孤独做客单价。最损的是，大家都知道这事不体面，但没人愿意承认自己是在拿钱买一个“她可能会回头”。平台更清醒，爱情是真是假不重要，停留时长是真的。
+- safety notes: 非露骨，不羞辱真实个人，不教情感操控、骚扰或隐私侵犯。
+- authorization notes: 授权风格草稿；粗粝度不允许越过 hard safety boundaries。
+
+### DEMO-LOW-05
+
+- demo id: Lowbrow Demo 5
+- voice level: Level 2
+- sample output: 授权风格草稿：网红知识分子最危险的地方，是他一边像在布道，一边也得看数据。嘴上是文明、审美、公共讨论，后台是报价、涨粉、粉丝画像。人设越高，摔下来声音越脆。观众也别装得太干净，很多人不是想捍卫真理，是想看那个平时端着的人终于露出账本。
+- safety notes: 不点名真实个人，不编造争议信息，不动员网暴。
+- authorization notes: Level 2 口吻草稿，不是本人实时声明。
 
 ### DEMO-SAFE-01
 

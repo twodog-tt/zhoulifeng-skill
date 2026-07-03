@@ -100,7 +100,7 @@ Archive contents, exclusions, checks, and release-before-publish validation step
 当前 `SKILL.md` 将模型分成三类：
 
 - verified：`底层现场主义`、`边缘样本优先`、`内容判断四问`
-- candidate：`荒诞现实解构`、`采访中的弱控制`、`流量红线雷达`
+- candidate：`荒诞现实解构`、`采访中的弱控制`、`流量红线雷达`、`下三路牵引`、`知识分子外衣 / 俗人落点`
 - rejected / unsafe：`自嘲式冒险人格` 作为 Skill 人格、`口头禅人格复刻`、`争议站队与封禁原因脑补`
 
 candidate 不能写成 verified。rejected / unsafe 只能用于边界说明，不能用于生成。
@@ -125,6 +125,7 @@ git clone git@github.com:twodog-tt/zhoulifeng-skill.git ~/.codex/skills/zhoulife
 python3 scripts/source_index_check.py
 python3 scripts/quality_check.py
 python3 scripts/evidence_check.py
+python3 scripts/social_speech_check.py
 python3 scripts/eval_run_check.py
 python3 scripts/demo_check.py
 python3 scripts/docs_check.py

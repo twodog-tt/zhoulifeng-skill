@@ -12,6 +12,7 @@ Before creating an archive:
 python3 scripts/source_index_check.py
 python3 scripts/quality_check.py
 python3 scripts/evidence_check.py
+python3 scripts/social_speech_check.py
 python3 scripts/eval_run_check.py
 python3 scripts/demo_check.py
 python3 scripts/docs_check.py
@@ -117,6 +118,7 @@ Before attaching or publishing any archive, rerun the full validation suite:
 python3 scripts/source_index_check.py
 python3 scripts/quality_check.py
 python3 scripts/evidence_check.py
+python3 scripts/social_speech_check.py
 python3 scripts/eval_run_check.py
 python3 scripts/demo_check.py
 python3 scripts/docs_check.py

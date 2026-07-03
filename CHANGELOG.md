@@ -9,17 +9,26 @@
 - Added public pixel portrait launch asset.
 - Added release archive creation script.
 - Added archive validation script.
+- Added social media speech corpus framework.
+- Added lowbrow voice calibration research.
+- Added social speech validation script.
+- Added lowbrow / anti-polish demo set.
+- Added new candidate models for 下三路牵引 and 知识分子外衣 / 俗人落点.
 
 ### Changed
 
 - Expanded archive workflow documentation.
 - Added launch and packaging pointers to README.
+- Calibrated authorized voice mode to reduce over-polished AI commentary.
+- Added over-polished output penalty to fidelity evaluation.
+- Strengthened distinction between rough authorized style and unsafe explicit content.
 
 ### Notes
 
 - No candidate models were upgraded.
 - Hard safety boundaries remain unchanged.
 - v0.7 is not released yet.
+- New lowbrow models remain candidate until evidence is sufficient.
 
 ## [0.6.0] - 2026-07-03
 

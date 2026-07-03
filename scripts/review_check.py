@@ -31,8 +31,6 @@ REQUIRED_PHRASES = {
         "copyright",
     ],
     "reviews/reports/v0.6-review-report.md": [
-        "status: prepared, not completed",
-        "not completed yet",
         "reviewer decision",
     ],
 }
@@ -60,10 +58,18 @@ def validate_reviews(root: Path) -> list[str]:
         report = report_path.read_text(encoding="utf-8")
         status_match = re.search(r"^Status:\s*(.+)$", report, flags=re.MULTILINE | re.IGNORECASE)
         status = status_match.group(1).strip().lower() if status_match else ""
+        if not status:
+            errors.append("review report is missing status")
+        elif "completed" not in status:
+            errors.append(f"review report has unexpected status: {status!r}")
         if "completed" in status and "not completed" not in status:
             lower = report.lower()
             if "reviewer decision" not in lower or "not yet reviewed" in lower:
                 errors.append("review report is marked completed without a reviewer decision")
+        if "prepared" in status and "not completed" in status:
+            lower = report.lower()
+            if "not completed yet" not in lower:
+                errors.append("prepared review report should state that it is not completed yet")
 
     return errors
 

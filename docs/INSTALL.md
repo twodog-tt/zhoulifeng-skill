@@ -56,11 +56,13 @@ python3 scripts/evidence_check.py
 python3 scripts/eval_run_check.py
 python3 scripts/demo_check.py
 python3 scripts/docs_check.py
+python3 scripts/review_check.py
+python3 scripts/demo_outputs_check.py
 python3 quick_validate.py
 python3 tests/run_fidelity_check.py
 ```
 
-The checks do not call external LLM APIs. They validate structure, source references, evidence rows, evaluation run artifacts, demo coverage, and required docs.
+The checks do not call external LLM APIs. They validate structure, source references, evidence rows, evaluation run artifacts, demo coverage, required docs, human review scaffolding, and public demo outputs.
 
 ## Runtime Compatibility Note
 

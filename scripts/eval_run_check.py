@@ -30,7 +30,7 @@ LATEST_RUN_REQUIRED_FILES = [
     "improvement-actions.md",
 ]
 
-CASE_SUMMARY_FIELDS = [
+LEGACY_CASE_SUMMARY_FIELDS = [
     "case_id",
     "category",
     "score_weight",
@@ -45,6 +45,28 @@ CASE_SUMMARY_FIELDS = [
     "action_required",
 ]
 
+V07_CASE_SUMMARY_FIELDS = [
+    "case_id",
+    "category",
+    "score_weight",
+    "answer_status",
+    "score",
+    "pass_status",
+    "safety_failure",
+    "impersonation_risk",
+    "candidate_verified_confusion",
+    "unsupported_claim",
+    "over_polished",
+    "lowbrow_boundary_failure",
+    "notes",
+    "action_required",
+]
+
+ALLOWED_CASE_SUMMARY_FIELDS = [
+    LEGACY_CASE_SUMMARY_FIELDS,
+    V07_CASE_SUMMARY_FIELDS,
+]
+
 
 def load_case_ids(path: Path) -> set[str]:
     data: Any = json.loads(path.read_text(encoding="utf-8"))
@@ -54,11 +76,16 @@ def load_case_ids(path: Path) -> set[str]:
     return {case_id for case_id in case_ids if isinstance(case_id, str) and case_id}
 
 
-def run_sort_key(path: Path) -> tuple[int, str]:
+def run_sort_key(path: Path) -> tuple[int, int, int, str]:
+    versioned_match = re.search(r"v(\d+)\.(\d+)-run-(\d+)$", path.name)
+    if versioned_match:
+        major, minor, run = versioned_match.groups()
+        return int(major), int(minor), int(run), path.name
+
     match = re.search(r"run-(\d+)$", path.name)
     if match:
-        return int(match.group(1)), path.name
-    return -1, path.name
+        return -1, -1, int(match.group(1)), path.name
+    return -1, -1, -1, path.name
 
 
 def validate_eval_runs(root: Path) -> tuple[list[str], int, int]:
@@ -93,16 +120,24 @@ def validate_eval_runs(root: Path) -> tuple[list[str], int, int]:
 
         with summary_path.open("r", encoding="utf-8-sig", newline="") as handle:
             reader = csv.DictReader(handle)
-            if reader.fieldnames != CASE_SUMMARY_FIELDS:
+            if reader.fieldnames not in ALLOWED_CASE_SUMMARY_FIELDS:
                 errors.append(
                     f"{run_dir.name}: unexpected case-summary fields: "
-                    f"expected {CASE_SUMMARY_FIELDS}, got {reader.fieldnames}"
+                    f"expected one of {ALLOWED_CASE_SUMMARY_FIELDS}, got {reader.fieldnames}"
                 )
                 continue
 
             rows = list(reader)
             total_rows += len(rows)
             seen_case_ids = {row.get("case_id", "").strip() for row in rows}
+            if run_dir == latest_run_dir:
+                missing_current_ids = current_case_ids - seen_case_ids
+                if missing_current_ids:
+                    errors.append(
+                        f"{run_dir.name}: latest case-summary missing current case IDs "
+                        f"{sorted(missing_current_ids)}"
+                    )
+
             unknown_current_ids = seen_case_ids - current_case_ids
             if unknown_current_ids:
                 errors.append(

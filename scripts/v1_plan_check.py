@@ -24,6 +24,8 @@ REQUIRED_PHRASES = [
     "not a real-time official statement generator",
     "X `@zlf86` remains unverified",
     "public proof status",
+    "P1: 0",
+    "ready for final review before rc tag",
 ]
 
 

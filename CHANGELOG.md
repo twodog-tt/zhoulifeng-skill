@@ -12,6 +12,13 @@
 - Added v1.0 readiness and stable package docs.
 - Added pre-v1.0 audit and model/source audit docs.
 
+### Changed
+
+- Resolved P1 readiness gaps for v1.0-rc.1 tag prep.
+- Documented rc.1 readiness as ready for final review before rc tag.
+- Documented remaining P2 items as non-blocking public polish or release-workflow tasks.
+- Updated stable package docs for `v1.0.0-rc.1` archive generation.
+
 ### Notes
 
 - v1.0.0 is not released.

@@ -2,7 +2,9 @@
 
 ## Status
 
-prepared, not completed
+completed for rc.1 readiness
+
+This is a release-candidate readiness audit, not a claim that final v1.0 release review is complete.
 
 ## Audit Scope
 
@@ -24,65 +26,69 @@ prepared, not completed
 
 ### Authorization / Public Proof
 
-- [ ] authorization scope is clear
-- [ ] public proof status is clear
-- [ ] no private authorization materials are included
-- [ ] not described as a real-time official statement generator
+- [x] authorization scope is clear
+- [x] public proof status is clear
+- [x] no private authorization materials are included
+- [x] not described as a real-time official statement generator
 
 ### Model Status
 
-- [ ] verified models are listed
-- [ ] candidate models remain candidate
-- [ ] rejected / unsafe patterns remain rejected
-- [ ] no unsupported model upgrades
+- [x] verified models are listed
+- [x] candidate models remain candidate
+- [x] rejected / unsafe patterns remain rejected
+- [x] no unsupported model upgrades
 
 ### Source Verification
 
-- [ ] source-index passes
-- [ ] evidence map passes
-- [ ] social speech map passes
-- [ ] source verification registry passes
-- [ ] X `@zlf86` remains unverified unless independently confirmed
+- [x] source-index passes
+- [x] evidence map passes
+- [x] social speech map passes
+- [x] source verification registry passes
+- [x] X `@zlf86` remains unverified unless independently confirmed
 
 ### Safety Boundaries
 
-- [ ] hard safety boundaries remain unchanged
-- [ ] no doxxing / harassment / privacy exposure
-- [ ] no dangerous / gray-market / illegal / platform-evasion guidance
-- [ ] no explicit content
-- [ ] no long transcript reproduction
+- [x] hard safety boundaries remain unchanged
+- [x] no doxxing / harassment / privacy exposure
+- [x] no dangerous / gray-market / illegal / platform-evasion guidance
+- [x] no explicit content
+- [x] no long transcript reproduction
 
 ### Demo Outputs
 
-- [ ] public demo outputs remain safe
-- [ ] Level 3 outputs are clearly authorized style drafts
-- [ ] no real-time personhood claim
+- [x] public demo outputs remain safe
+- [x] Level 3 outputs are clearly authorized style drafts
+- [x] no real-time personhood claim
 
 ### Launch Copy
 
-- [ ] launch copy avoids overclaiming
-- [ ] 100/100 framing remains softened
-- [ ] broad external review is not claimed as complete
+- [x] launch copy avoids overclaiming
+- [x] 100/100 framing remains softened
+- [x] broad external review is not claimed as complete
 
 ### Install / Archive
 
-- [ ] install docs are usable
-- [ ] archive script works
-- [ ] generated archive is inspected before release
+- [x] install docs are usable
+- [x] archive script works
+- [x] generated archive is inspected before release-candidate tag prep
 
 ### External Review
 
-- [ ] EXT-001 is recorded
-- [ ] EXT-001-FUP is recorded
-- [ ] broad external review is not claimed as complete
+- [x] EXT-001 is recorded
+- [x] EXT-001-FUP is recorded
+- [x] broad external review is not claimed as complete
 
 ### Private Material Leakage
 
-- [ ] no private chats
-- [ ] no private authorization materials
-- [ ] no long subtitles or raw transcripts
-- [ ] no private data about real people
+- [x] no private chats
+- [x] no private authorization materials
+- [x] no long subtitles or raw transcripts
+- [x] no private data about real people
 
 ## Decision
 
-pending
+ready for final review before rc tag
+
+P0: 0
+P1: 0
+P2: 7 optional items remain and do not block `v1.0.0-rc.1` tag prep.

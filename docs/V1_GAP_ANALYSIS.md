@@ -17,12 +17,12 @@
 - external feedback currently includes 1 initial reviewer row and 1 follow-up row; broader reviewer coverage is still limited.
 - public proof is still not included in the repository.
 - X `@zlf86` remains unverified and can only be used for candidate voice calibration.
-- screenshots are still optional / incomplete for final launch polish.
-- archive can be generated locally; a final v1.0 archive asset is not yet attached to a v1.0 release.
-- final v1.0 regression run is not yet completed.
-- final public launch copy audit is not yet completed.
-- install screenshot / validation screenshot are still optional gaps.
-- broader reviewer coverage is still desirable before or after v1.0 depending on release risk appetite.
+- screenshots remain optional launch assets, not release blockers.
+- archive can be generated locally and remains untracked in `dist/`.
+- final v1.0 regression run is optional unless v1.0 release criteria are changed before tag prep.
+- final public launch copy audit is completed for rc.1 readiness; another pass may be done before final v1.0.
+- install screenshot / validation screenshot are optional public-asset gaps.
+- broader reviewer coverage is still desirable after rc.1 and before or after v1.0 depending on release risk appetite.
 
 ## P0 Blockers
 
@@ -30,25 +30,36 @@ None known at this planning checkpoint.
 
 ## P1 Before v1.0
 
-- Run final validation suite.
-- Generate and inspect v1.0 archive package.
-- Complete final README / AUTHORIZATION / launch / FAQ wording audit.
-- Complete final source verification and candidate model status audit.
-- Complete final safety-boundary audit.
-- Record final v1.0 release notes.
-- Decide whether a final v1.0 regression run is required.
+None remaining for `v1.0.0-rc.1` tag prep.
+
+### P1 Resolution Matrix
+
+- Run final validation suite: fixed; all local validation commands pass.
+- Generate and inspect v1.0 archive package: fixed for rc.1; `dist/zhoulifeng-skill-v1.0.0-rc.1.zip` can be generated and `dist/` is ignored.
+- Complete final README / AUTHORIZATION / launch / FAQ wording audit: fixed for rc.1; no overclaiming change required in this pass.
+- Complete final source verification and candidate model status audit: fixed; `references/research/11-pre-v1-model-and-source-audit.md` keeps all candidate models candidate and keeps X `@zlf86` unverified.
+- Complete final safety-boundary audit: fixed for rc.1; hard safety boundaries remain unchanged.
+- Record final v1.0 release notes: downgraded to P2 until actual v1.0 release prep; release notes should not be drafted as final before rc.1 tag prep.
+- Decide whether a final v1.0 regression run is required: fixed; not required for rc.1 tag prep because no `SKILL.md`, model-state, safety-case, or evaluator changes were made in this pass.
 
 ## P2 Optional Before v1.0
 
-- Add install screenshot.
-- Add validation screenshot.
-- Add demo screenshot or public demo recording.
-- Collect more external reviewer feedback.
-- Attach a generated archive to a release after inspection.
-- Prepare final X / GitHub announcement copy.
+- Add install screenshot: deferred; public-asset polish, not release blocker.
+- Add validation screenshot: deferred; public-asset polish, not release blocker.
+- Add demo screenshot or public demo recording: deferred; public-asset polish, not release blocker.
+- Collect more external reviewer feedback: deferred; broader external review is desirable but not claimed complete.
+- Attach a generated archive to a release after inspection: deferred until rc.1 or v1.0 release workflow; do not commit `dist/`.
+- Prepare final X / GitHub announcement copy: deferred to final release prep.
+- Draft final `RELEASE_NOTES_v1.0.0.md`: downgraded from P1; should be created during actual v1.0 release prep, not during rc.1 readiness cleanup.
 
 ## Recommendation
 
-ready after minor fixes
+ready for final review before rc tag
 
-Rationale: no P0 blocker is known, v0.9.0 is released, one real external reviewer cycle is recorded, and validation has been passing. v1.0 should still wait for the final audit, final archive inspection, and final release-note pass.
+Rationale: P0 is 0 and P1 is 0 for rc.1 tag prep. Remaining P2 items are optional release polish or actions that belong to the actual rc/final release workflow.
+
+## Current Gap Count
+
+- P0: 0
+- P1: 0
+- P2: 7

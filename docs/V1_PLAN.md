@@ -44,3 +44,11 @@ Stable means installable, auditable, and boundary-stable. It does not mean final
 v0.9.0 exists and includes one real external reviewer feedback row plus a follow-up pass. Broad external review is not claimed as complete.
 
 The project is in v1.0 planning / release-candidate preparation, not v1.0 release.
+
+Current rc.1 status: ready for final review before rc tag.
+
+P0: 0
+P1: 0
+P2: 7 optional items remain and are not rc.1 release blockers.
+
+candidate models remain candidate. X `@zlf86` remains unverified. hard safety boundaries remain unchanged.

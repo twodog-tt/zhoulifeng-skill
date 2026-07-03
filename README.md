@@ -74,6 +74,8 @@ v0.8.0 不升级 candidate models，不放松 hard safety boundaries，不把未
 
 The project is preparing for a future stable `v1.0.0` release. This is planning and release-candidate preparation, not a v1.0 release.
 
+Current v1.0-rc.1 readiness: ready for final review before rc tag. P0: `0`; P1: `0`; P2: `7` optional items remain and are not rc.1 release blockers.
+
 See:
 
 - [docs/V1_PLAN.md](docs/V1_PLAN.md)

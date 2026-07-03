@@ -54,3 +54,13 @@ v1.0.0 只有在以下条件满足时才可发布。
 ## Negative Claims
 
 v1.0.0 must not claim perfect fidelity, broad external review completion, real-time official statement generation, or verified status for X `@zlf86` unless independently confirmed and recorded.
+
+## rc.1 Readiness Status
+
+The current planning state is ready for final review before rc tag.
+
+- P0: 0
+- P1: 0
+- P2: 7 optional items remain
+
+The remaining P2 items are public polish or actual release-workflow tasks, not hard release-candidate blockers.

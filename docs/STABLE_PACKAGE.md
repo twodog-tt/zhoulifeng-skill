@@ -65,3 +65,11 @@ Confirm the archive excludes:
 For v1.0-rc.1, a generated archive may be used for inspection and install testing. It should not be treated as the final v1.0 package until the final pre-v1.0 audit is complete.
 
 candidate models remain candidate. hard safety boundaries remain unchanged. This package is not a real-time official statement generator.
+
+## Current rc.1 Status
+
+`dist/zhoulifeng-skill-v1.0.0-rc.1.zip` can be generated locally with the build command above.
+
+`dist/` is ignored by git and must not be committed.
+
+The archive is ready for final review before rc tag, not for final v1.0 publication without release workflow inspection.

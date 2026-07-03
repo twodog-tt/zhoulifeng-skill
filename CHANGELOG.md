@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.5.0] - unreleased
+
+### Added
+
+- Expanded timestamped evidence map.
+- Added additional evidence notes.
+- Added installation, packaging, and runtime compatibility docs.
+- Expanded public demo set.
+- Added demo and docs validation scripts.
+
+### Changed
+
+- Strengthened evidence coverage for verified and candidate models.
+- Improved README demo and installation pointers.
+
+### Notes
+
+- Candidate models remain candidate unless explicitly justified by evidence.
+- Hard safety boundaries remain unchanged.
+
 ## [0.4.0] - 2026-07-03
 
 ### Added

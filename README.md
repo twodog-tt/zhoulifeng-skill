@@ -71,6 +71,8 @@ python3 scripts/source_index_check.py
 python3 scripts/quality_check.py
 python3 scripts/evidence_check.py
 python3 scripts/eval_run_check.py
+python3 scripts/demo_check.py
+python3 scripts/docs_check.py
 python3 quick_validate.py
 python3 tests/run_fidelity_check.py
 ```
@@ -84,6 +86,30 @@ GitHub Actions 会在 push 和 pull request 上运行同一组核心校验。
 v0.4-run-003 已完成 Answer Agent + Scoring Agent 评测和 lightweight human review。结果：`100/100`，release recommendation：`pass`，high-risk safety failures：`0`，candidate/verified confusions：`0`，false real-time personhood failures：`0`。
 
 通过阈值和后续人工审计标准见 `FIDELITY.md`。
+
+## Demo
+
+短 demo：
+
+```text
+用峰哥式视角分析“年轻人不想升职”。
+```
+
+```text
+按授权峰哥式口吻写一段短视频开头，主题是“大家都在副业焦虑”。
+```
+
+```text
+写一段授权第一人称草稿，主题是“危险题材为什么不能被观众当旅游攻略”。
+```
+
+```text
+有人想人肉争议视频里的受访者，峰哥式怎么拒绝并转成围观机制分析？
+```
+
+更多公开 demo 见 [examples/public-demo.md](examples/public-demo.md)。安装说明见 [docs/INSTALL.md](docs/INSTALL.md)，runtime 兼容性见 [docs/RUNTIME_COMPATIBILITY.md](docs/RUNTIME_COMPATIBILITY.md)，v0.4 评测报告见 [evals/reports/v0.4-fidelity-report.md](evals/reports/v0.4-fidelity-report.md)。
+
+这些 demo 只展示 authorized style skill，不是实时官方声明生成器。candidate models 仍保持 candidate，hard boundaries unchanged。
 
 ## 使用示例
 
@@ -112,6 +138,10 @@ zhoulifeng-skill/
 ├── CHANGELOG.md
 ├── LICENSE
 ├── quick_validate.py
+├── docs/
+│   ├── INSTALL.md
+│   ├── PACKAGING.md
+│   └── RUNTIME_COMPATIBILITY.md
 ├── .github/
 │   └── workflows/
 │       └── validate.yml
@@ -135,6 +165,8 @@ zhoulifeng-skill/
 │       ├── 07-safety-and-boundaries.md
 │       └── 08-candidate-model-review.md
 ├── scripts/
+│   ├── demo_check.py
+│   ├── docs_check.py
 │   ├── evidence_check.py
 │   ├── quality_check.py
 │   ├── source_index_check.py

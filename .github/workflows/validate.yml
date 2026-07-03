@@ -28,6 +28,12 @@ jobs:
       - name: Check evaluation run artifacts
         run: python3 scripts/eval_run_check.py
 
+      - name: Check public demo set
+        run: python3 scripts/demo_check.py
+
+      - name: Check required docs
+        run: python3 scripts/docs_check.py
+
       - name: Validate skill frontmatter
         run: python3 quick_validate.py
 

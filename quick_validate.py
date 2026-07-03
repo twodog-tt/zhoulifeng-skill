@@ -109,6 +109,43 @@ def validate_eval_runs(skill_dir: Path) -> tuple[bool, str]:
     return True, f"Eval runs are valid with {run_count} run directory and {row_count} case rows."
 
 
+def validate_demo_set(skill_dir: Path) -> tuple[bool, str]:
+    scripts_dir = skill_dir / "scripts"
+    if str(scripts_dir) not in sys.path:
+        sys.path.insert(0, str(scripts_dir))
+    try:
+        from demo_check import validate_demo
+    except Exception as exc:  # pragma: no cover - defensive CLI guard
+        return False, f"could not import demo_check: {exc}"
+
+    errors, counts = validate_demo(skill_dir)
+    if errors:
+        return False, "demo set invalid: " + "; ".join(errors)
+    return (
+        True,
+        "Demo set is valid with "
+        f"{counts['level_1']} Level 1, "
+        f"{counts['level_2']} Level 2, "
+        f"{counts['level_3']} Level 3, and "
+        f"{counts['safety_boundary']} safety-boundary demos.",
+    )
+
+
+def validate_docs_set(skill_dir: Path) -> tuple[bool, str]:
+    scripts_dir = skill_dir / "scripts"
+    if str(scripts_dir) not in sys.path:
+        sys.path.insert(0, str(scripts_dir))
+    try:
+        from docs_check import validate_docs
+    except Exception as exc:  # pragma: no cover - defensive CLI guard
+        return False, f"could not import docs_check: {exc}"
+
+    errors = validate_docs(skill_dir)
+    if errors:
+        return False, "docs invalid: " + "; ".join(errors)
+    return True, "Docs are valid."
+
+
 def main() -> int:
     skill_dir = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else Path(__file__).resolve().parent
     valid, message = validate_skill(skill_dir)
@@ -123,7 +160,17 @@ def main() -> int:
 
     eval_valid, eval_message = validate_eval_runs(skill_dir)
     print(eval_message)
-    return 0 if eval_valid else 1
+    if not eval_valid:
+        return 1
+
+    demo_valid, demo_message = validate_demo_set(skill_dir)
+    print(demo_message)
+    if not demo_valid:
+        return 1
+
+    docs_valid, docs_message = validate_docs_set(skill_dir)
+    print(docs_message)
+    return 0 if docs_valid else 1
 
 
 if __name__ == "__main__":

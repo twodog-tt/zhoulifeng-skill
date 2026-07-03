@@ -25,4 +25,4 @@ Not yet reviewed.
 
 ## Notes
 
-Run 001 is prepared only. Human review should occur after real Answer Agent and Scoring Agent outputs are recorded.
+Automated v0.7 scoring passed with 100/100. Human spot-check is recommended before tagging v0.7.0.

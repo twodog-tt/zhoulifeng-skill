@@ -34,6 +34,12 @@ jobs:
       - name: Check required docs
         run: python3 scripts/docs_check.py
 
+      - name: Check human review scaffolding
+        run: python3 scripts/review_check.py
+
+      - name: Check public demo outputs
+        run: python3 scripts/demo_outputs_check.py
+
       - name: Validate skill frontmatter
         run: python3 quick_validate.py
 

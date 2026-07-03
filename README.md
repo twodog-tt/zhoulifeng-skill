@@ -1,5 +1,9 @@
 # zhoulifeng-skill
 
+[![Release](https://img.shields.io/github/v/release/twodog-tt/zhoulifeng-skill?label=release)](https://github.com/twodog-tt/zhoulifeng-skill/releases)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Validate](https://github.com/twodog-tt/zhoulifeng-skill/actions/workflows/validate.yml/badge.svg)](https://github.com/twodog-tt/zhoulifeng-skill/actions/workflows/validate.yml)
+
 一个授权维护的“峰哥亡命天涯式社会观察与口吻草稿” Agent Skill。
 
 This project is an authorized Zhou Lifeng / 峰哥亡命天涯 style skill. It is not a real-time official statement generator, and generated drafts are not a substitute for Zhou Lifeng personally confirming a view.
@@ -13,6 +17,33 @@ Status: Evidence depth, packaging, and public demo release
 v0.5.0 在 v0.4.0 授权口吻评测通过的基础上，补强 evidence map、evidence notes、安装/打包/runtime 文档和 Public Demo Set。v0.4-run-003 评分为 `100/100`，release recommendation 为 `pass`。
 
 本项目是 authorized style skill，不是实时官方声明生成器。candidate models 仍保持 candidate，hard safety boundaries 保持不变。
+
+## Quick Links
+
+- [Installation](docs/INSTALL.md)
+- [Public Demo](examples/public-demo.md)
+- [Public Demo Outputs](examples/public-demo-outputs.md)
+- [Evidence Map](references/evidence/zlf-evidence-map.csv)
+- [Fidelity Report](evals/reports/v0.4-fidelity-report.md)
+- [Authorization](AUTHORIZATION.md)
+- [Runtime Compatibility](docs/RUNTIME_COMPATIBILITY.md)
+- [Security Policy](SECURITY.md)
+
+## What This Is / Is Not
+
+This is:
+
+- an authorized style Skill for Zhou Lifeng / 峰哥亡命天涯-style social observation, topic framing, commentary drafts, and voice adaptation
+- a public-source-supported evidence and demo repository
+- a Skill with verified / candidate / rejected model separation
+
+This is not:
+
+- a real-time official statement generator
+- a replacement for Zhou Lifeng personally confirming a view
+- permission to fabricate private facts, private views, locations, relationships, promises, or controversy responses
+- permission to provide dangerous travel, gray-market access, privacy exposure, doxxing, harassment, explicit content, platform evasion, or long transcript copying
+- evidence that candidate models have become verified
 
 ## v0.6 Roadmap
 
@@ -73,6 +104,8 @@ python3 scripts/evidence_check.py
 python3 scripts/eval_run_check.py
 python3 scripts/demo_check.py
 python3 scripts/docs_check.py
+python3 scripts/review_check.py
+python3 scripts/demo_outputs_check.py
 python3 quick_validate.py
 python3 tests/run_fidelity_check.py
 ```
@@ -107,7 +140,7 @@ v0.4-run-003 已完成 Answer Agent + Scoring Agent 评测和 lightweight human 
 有人想人肉争议视频里的受访者，峰哥式怎么拒绝并转成围观机制分析？
 ```
 
-更多公开 demo 见 [examples/public-demo.md](examples/public-demo.md)。安装说明见 [docs/INSTALL.md](docs/INSTALL.md)，runtime 兼容性见 [docs/RUNTIME_COMPATIBILITY.md](docs/RUNTIME_COMPATIBILITY.md)，v0.4 评测报告见 [evals/reports/v0.4-fidelity-report.md](evals/reports/v0.4-fidelity-report.md)。
+更多公开 demo 见 [examples/public-demo.md](examples/public-demo.md)，对应 sample outputs 见 [examples/public-demo-outputs.md](examples/public-demo-outputs.md)。安装说明见 [docs/INSTALL.md](docs/INSTALL.md)，runtime 兼容性见 [docs/RUNTIME_COMPATIBILITY.md](docs/RUNTIME_COMPATIBILITY.md)，v0.4 评测报告见 [evals/reports/v0.4-fidelity-report.md](evals/reports/v0.4-fidelity-report.md)。
 
 这些 demo 只展示 authorized style skill，不是实时官方声明生成器。candidate models 仍保持 candidate，hard boundaries unchanged。
 
@@ -139,9 +172,11 @@ zhoulifeng-skill/
 ├── LICENSE
 ├── quick_validate.py
 ├── docs/
+│   ├── ARCHIVE_WORKFLOW.md
 │   ├── INSTALL.md
 │   ├── PACKAGING.md
-│   └── RUNTIME_COMPATIBILITY.md
+│   ├── RUNTIME_COMPATIBILITY.md
+│   └── SCREENSHOTS.md
 ├── .github/
 │   └── workflows/
 │       └── validate.yml
@@ -166,11 +201,18 @@ zhoulifeng-skill/
 │       └── 08-candidate-model-review.md
 ├── scripts/
 │   ├── demo_check.py
+│   ├── demo_outputs_check.py
 │   ├── docs_check.py
 │   ├── evidence_check.py
 │   ├── quality_check.py
+│   ├── review_check.py
 │   ├── source_index_check.py
 │   └── transcript_cleaner.py
+├── reviews/
+│   ├── README.md
+│   ├── reviewer-checklist.md
+│   ├── v0.6-human-review-plan.md
+│   └── reports/
 ├── evals/
 │   ├── dual-agent-protocol.md
 │   ├── evaluator-prompts/
@@ -183,6 +225,7 @@ zhoulifeng-skill/
 │   └── run_fidelity_check.py
 └── examples/
     ├── public-demo.md
+    ├── public-demo-outputs.md
     ├── sample-prompts.md
     └── sample-conversations.md
 ```

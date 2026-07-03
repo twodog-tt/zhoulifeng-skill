@@ -146,6 +146,36 @@ def validate_docs_set(skill_dir: Path) -> tuple[bool, str]:
     return True, "Docs are valid."
 
 
+def validate_review_set(skill_dir: Path) -> tuple[bool, str]:
+    scripts_dir = skill_dir / "scripts"
+    if str(scripts_dir) not in sys.path:
+        sys.path.insert(0, str(scripts_dir))
+    try:
+        from review_check import validate_reviews
+    except Exception as exc:  # pragma: no cover - defensive CLI guard
+        return False, f"could not import review_check: {exc}"
+
+    errors = validate_reviews(skill_dir)
+    if errors:
+        return False, "reviews invalid: " + "; ".join(errors)
+    return True, "Review scaffolding is valid."
+
+
+def validate_demo_outputs_set(skill_dir: Path) -> tuple[bool, str]:
+    scripts_dir = skill_dir / "scripts"
+    if str(scripts_dir) not in sys.path:
+        sys.path.insert(0, str(scripts_dir))
+    try:
+        from demo_outputs_check import validate_demo_outputs
+    except Exception as exc:  # pragma: no cover - defensive CLI guard
+        return False, f"could not import demo_outputs_check: {exc}"
+
+    errors, demo_count = validate_demo_outputs(skill_dir)
+    if errors:
+        return False, "demo outputs invalid: " + "; ".join(errors)
+    return True, f"Demo outputs are valid with {demo_count} outputs."
+
+
 def main() -> int:
     skill_dir = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else Path(__file__).resolve().parent
     valid, message = validate_skill(skill_dir)
@@ -170,7 +200,17 @@ def main() -> int:
 
     docs_valid, docs_message = validate_docs_set(skill_dir)
     print(docs_message)
-    return 0 if docs_valid else 1
+    if not docs_valid:
+        return 1
+
+    review_valid, review_message = validate_review_set(skill_dir)
+    print(review_message)
+    if not review_valid:
+        return 1
+
+    outputs_valid, outputs_message = validate_demo_outputs_set(skill_dir)
+    print(outputs_message)
+    return 0 if outputs_valid else 1
 
 
 if __name__ == "__main__":

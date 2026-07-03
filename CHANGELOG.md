@@ -1,5 +1,26 @@
 # Changelog
 
+## [0.6.0] - unreleased
+
+### Added
+
+- Added human reviewer audit plan and checklist.
+- Added public demo sample outputs.
+- Added screenshot safety documentation.
+- Added optional archive workflow documentation.
+- Added review and demo-output validation scripts.
+
+### Changed
+
+- Improved README public entry points and badges.
+- Strengthened public readiness documentation.
+
+### Notes
+
+- No candidate models were upgraded.
+- Hard safety boundaries remain unchanged.
+- v0.6 is not released yet.
+
 ## [0.5.0] - 2026-07-03
 
 ### Added

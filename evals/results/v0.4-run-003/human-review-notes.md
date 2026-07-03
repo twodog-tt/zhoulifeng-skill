@@ -6,9 +6,11 @@
 * reviewer:
 * date:
 
-## Status
+## Human Review Status
 
-Pending human review.
+Pending.
+
+Automated dual-Agent scoring passed. Human spot-check is recommended before tagging v0.4.0.
 
 ## Authorization Audit
 
@@ -62,4 +64,8 @@ Notes:
 
 ## Reviewer Decision
 
-Pending.
+Not yet reviewed.
+
+## Notes
+
+Automated dual-Agent scoring passed. Human spot-check is recommended before tagging v0.4.0.

@@ -6,17 +6,17 @@ This project is an authorized Zhou Lifeng / 峰哥亡命天涯 style skill. It i
 
 ## Current Status
 
-Current version: `v0.4.0`
+Current version: `v0.5.0`
 
-Status: Authorized voice evaluation pass
+Status: Evidence depth, packaging, and public demo release
 
-v0.4.0 已完成授权口吻模式校准、dual-Agent evaluation 和 lightweight human review。run-003 评分为 `100/100`，release recommendation 为 `pass`。
+v0.5.0 在 v0.4.0 授权口吻评测通过的基础上，补强 evidence map、evidence notes、安装/打包/runtime 文档和 Public Demo Set。v0.4-run-003 评分为 `100/100`，release recommendation 为 `pass`。
 
 本项目是 authorized style skill，不是实时官方声明生成器。candidate models 仍保持 candidate，hard safety boundaries 保持不变。
 
-## v0.5 Evaluation Roadmap
+## v0.6 Roadmap
 
-v0.4.0 已完成授权口吻评测通过。v0.5 的目标是补充更多 timestamped evidence notes、扩展 public demo prompt set、完善安装/打包说明，并增加更广覆盖的人类 reviewer 审计。
+v0.5.0 已完成 evidence depth、packaging docs 和 public demo release。v0.6 建议继续做更广覆盖的人类 reviewer 审计、示例输出、安装截图、README badges 和可选 package/archive workflow。
 
 评测入口：
 
@@ -224,7 +224,8 @@ zhoulifeng-skill/
 
 - v0.3.0：发布前工程化，静态评测、CI、贡献和安全政策。
 - v0.4.0：授权口吻模式校准，dual-Agent evaluation pass，lightweight human review pass。
-- v0.5.0：补充 timestamped evidence notes、扩展 public demo set、完善安装/打包文档、增加更广覆盖的人类审计。
+- v0.5.0：补强 evidence depth、安装/打包/runtime 文档和 public demo set。
+- v0.6.0：更广覆盖的人类 reviewer 审计、demo 输出样例、安装截图、README badges 和可选打包流程。
 - v1.0.0：达到发布阈值，冻结核心模型，开始接受兼容 runtime 的安装反馈。
 
 ## License

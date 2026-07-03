@@ -1,8 +1,8 @@
 # zhoulifeng-skill
 
-一个基于公开资料提炼的“峰哥亡命天涯式社会观察” Agent Skill。
+一个授权维护的“峰哥亡命天涯式社会观察与口吻草稿” Agent Skill。
 
-This project is a public-source-based perspective skill, not an official or authorized Zhou Lifeng bot.
+This project is an authorized Zhou Lifeng / 峰哥亡命天涯 style skill. It is not a real-time official statement generator, and generated drafts are not a substitute for Zhou Lifeng personally confirming a view.
 
 ## Current Status
 
@@ -10,11 +10,11 @@ Current version: `v0.3.0`
 
 Status: Engineering readiness / release validation ready
 
-v0.3 重点是发布前工程化：新增 fidelity/safety 测试用例、静态评测脚本、贡献指南、安全政策和 GitHub Actions 校验。它没有继续强化“人格扮演”，而是把重点放在可审计、可测试、可安装、可贡献。
+v0.3 重点是发布前工程化：新增 fidelity/safety 测试用例、静态评测脚本、贡献指南、安全政策和 GitHub Actions 校验。v0.4 正在从公开资料视角 Skill 重新校准为授权风格 Skill，同时保留实时声明、私人事实和高风险内容边界。
 
 ## v0.4 Evaluation Roadmap
 
-v0.3.0 已完成工程化校验。v0.4 的目标是 dual Agent fidelity evaluation、timestamped evidence notes 和公开 demo prompt set。当前 verified / candidate / rejected 状态保持不变，本项目仍不是本人 bot。
+v0.3.0 已完成工程化校验。v0.4 的目标是 dual Agent fidelity evaluation、timestamped evidence notes、授权口吻模式评测和公开 demo prompt set。当前 verified / candidate / rejected 状态保持不变，本项目不是实时本人声明生成器。
 
 v0.4 入口：
 
@@ -24,9 +24,15 @@ v0.4 入口：
 
 ## 项目定位
 
-本仓库用于研究周丽峰 / 峰哥亡命天涯公开内容中的观察视角、内容判断方式、表达 DNA、话题边界和反模式。它面向二创写作、内容选题分析、社会观察评论、采访视角拆解和争议事件分层分析。
+本仓库用于维护授权的 Zhou Lifeng / 峰哥亡命天涯 style Skill，研究并生成授权风格草稿、内容选题分析、社会观察评论、采访视角拆解和争议事件分层分析。
 
-这不是周丽峰本人项目，不是授权项目，不代表本人观点，也不用于生成本人声明。
+授权允许更接近峰哥口吻做风格草稿、内容分析和二创辅助；但它不自动允许虚构私人事实、实时观点、真实承诺、行踪、关系或争议回应。风格草稿不得被包装成峰哥刚刚亲口确认的真实声明，除非另有独立确认或用户提供真实原文与发布背景。
+
+## Authorization Status
+
+本项目现在按授权风格 Skill 维护。授权允许更接近峰哥口吻进行风格草稿、内容分析和二创辅助，但不允许虚构私人事实、实时观点或危险内容。
+
+授权状态和范围见 [AUTHORIZATION.md](AUTHORIZATION.md)。公开仓库不保存私人合同、私聊、签名、电话号码、地址或其他非公开授权材料。
 
 ## Model Status
 
@@ -90,6 +96,7 @@ GitHub Actions 会在 push 和 pull request 上运行同一组核心校验。
 zhoulifeng-skill/
 ├── SKILL.md
 ├── README.md
+├── AUTHORIZATION.md
 ├── FIDELITY.md
 ├── CONTRIBUTING.md
 ├── SECURITY.md
@@ -156,8 +163,8 @@ zhoulifeng-skill/
 
 本 Skill 不做：
 
-- 冒充周丽峰本人。
-- 捏造本人观点或私人信息。
+- 把模型生成内容伪装成周丽峰刚刚亲口确认的真实声明。
+- 捏造本人观点、实时承诺、行踪、关系或私人信息。
 - 传播未证实隐私、人肉信息或网暴目标。
 - 生成危险探险、违法边境行动、灰产接触、规避平台封禁指南。
 - 生成露骨性内容。
@@ -170,7 +177,7 @@ zhoulifeng-skill/
 
 欢迎补充公开来源、研究摘要、评测用例和安全边界。贡献前请运行本地校验，并确保新增结论可以回到 source ID。
 
-不接受未证实隐私、长篇搬运字幕/原文、冒充本人文案、危险行动指南、露骨内容、平台规避教程或无来源人格设定。
+不接受未证实隐私、长篇搬运字幕/原文、伪装成实时本人声明的文案、危险行动指南、露骨内容、平台规避教程或无来源人格设定。
 
 ## Release Roadmap
 

@@ -1,6 +1,6 @@
 # Security Policy
 
-This project is not authorized by 周丽峰 and does not represent him. It is a public-source research Skill for social-observation perspective analysis.
+This project is maintained as an authorized Zhou Lifeng / 峰哥亡命天涯 style Skill. Authorization supports style drafting and content analysis; it does not make model output a verified real-time personal statement from Zhou Lifeng.
 
 ## Reporting Security Issues
 
@@ -17,8 +17,8 @@ Do not include private information, doxxing material, leaked messages, or danger
 
 Security issues include:
 
-- Impersonating 周丽峰本人 or generating statements as him.
-- Fabricating personal views, private facts, income, location, relationships, or platform inside information.
+- Presenting generated drafts as Zhou Lifeng's verified real-time personal statements.
+- Fabricating personal views, private facts, income, location, relationships, commitments, plans, controversy responses, or platform inside information.
 - Revealing or encouraging collection of private information about real people.
 - Doxxing, harassment, dogpiling, or targeted humiliation.
 - Dangerous travel, border action, gray-market contact, war-zone, or illegal activity guidance.
@@ -31,6 +31,8 @@ Security issues include:
 ## Scope
 
 We handle safety issues in this repository's Skill instructions, tests, references, and examples. We do not process requests for private information about 周丽峰, interview subjects, contributors, or third parties.
+
+Do not submit private authorization materials, contracts, chat logs, signatures, phone numbers, addresses, or other non-public evidence in security reports.
 
 ## Preferred Fix Pattern
 

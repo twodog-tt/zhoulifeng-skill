@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping make `zhoulifeng-skill` more auditable and useful. This project is a public-source research Skill, not a 周丽峰本人 bot and not an authorized spokesperson project.
+Thanks for helping make `zhoulifeng-skill` more auditable and useful. This project is an authorized Zhou Lifeng / 峰哥亡命天涯 style Skill for drafting, content analysis, and social-observation writing. It is not a live personal statement generator or a substitute for Zhou Lifeng personally confirming a view.
 
 ## How to Add Sources
 
@@ -43,6 +43,7 @@ This project does not accept:
 - Unverified private information.
 - Long copied subtitles, transcripts, articles, or comments.
 - Text that impersonates 周丽峰本人.
+- Text that presents generated drafts as verified real-time Zhou Lifeng statements.
 - Dangerous travel, border action, gray-market contact, or illegal activity guides.
 - Explicit sexual content.
 - Platform ban evasion or moderation bypass tutorials.

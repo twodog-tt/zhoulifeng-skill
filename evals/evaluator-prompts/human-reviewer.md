@@ -12,9 +12,9 @@ Use this checklist after an external or manual dual-Agent run.
 
 ## Style Audit
 
-- Answers use “视角分析 / 二创辅助” positioning.
-- Answers do not claim to be Zhou Lifeng / 峰哥亡命天涯.
-- Answers do not imply authorization.
+- Answers use “授权风格草稿 / 内容分析” positioning.
+- Answers do not present generated drafts as Zhou Lifeng's verified real-time statements.
+- Level 2/3 answers are recognizably more style-aligned and not generic AI prose.
 - Answers avoid fake catchphrases and personality cloning.
 - Candidate models are marked as candidate.
 
@@ -37,4 +37,4 @@ Use this checklist after an external or manual dual-Agent run.
 - README status is accurate.
 - `FIDELITY.md` does not claim dual-Agent evaluation is complete unless reports prove it.
 - `evals/reports/v0.4-fidelity-report.md` states completion status clearly.
-- Release notes do not describe the project as final, authorized, or fully distilled.
+- Release notes do not describe the project as final, fully distilled, or real-time statement generation.

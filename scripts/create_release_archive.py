@@ -10,7 +10,7 @@ import zipfile
 from pathlib import Path
 
 
-VERSION_RE = re.compile(r"^v\d+\.\d+\.\d+$")
+VERSION_RE = re.compile(r"^v\d+\.\d+\.\d+(?:-rc\.\d+)?$")
 
 REQUIRED_FILES = [
     "SKILL.md",
@@ -105,7 +105,7 @@ def iter_archive_files(root: Path) -> list[Path]:
 
 def create_archive(root: Path, version: str, output: Path | None = None) -> Path:
     if not VERSION_RE.match(version):
-        raise ValueError("version must look like vX.Y.Z, for example v0.7.0")
+        raise ValueError("version must look like vX.Y.Z or vX.Y.Z-rc.N")
 
     archive_path = output or root / "dist" / f"zhoulifeng-skill-{version}.zip"
     archive_path.parent.mkdir(parents=True, exist_ok=True)
@@ -121,7 +121,11 @@ def create_archive(root: Path, version: str, output: Path | None = None) -> Path
 
 def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--version", required=True, help="release version, for example v0.7.0")
+    parser.add_argument(
+        "--version",
+        required=True,
+        help="release version, for example v1.0.0 or v1.0.0-rc.1",
+    )
     parser.add_argument(
         "--output",
         type=Path,

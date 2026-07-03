@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.0.0] - planning
+
+### Added
+
+- Added v1.0 planning document.
+- Added v1.0 release criteria.
+- Added v1.0 gap analysis.
+- Added v1.0 release checklist.
+- Added v1.0 task plan.
+- Added v1.0 readiness and stable package docs.
+- Added pre-v1.0 audit and model/source audit docs.
+
+### Notes
+
+- v1.0.0 is not released.
+- Candidate models remain candidate.
+- X `@zlf86` remains unverified.
+- Hard safety boundaries remain unchanged.
+
 ## [0.9.0] - 2026-07-03
 
 ### Added

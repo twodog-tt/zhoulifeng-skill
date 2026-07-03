@@ -55,6 +55,9 @@ jobs:
       - name: Check launch materials
         run: python3 scripts/launch_materials_check.py
 
+      - name: Check v1.0 planning docs
+        run: python3 scripts/v1_plan_check.py
+
       - name: Validate skill frontmatter
         run: python3 quick_validate.py
 

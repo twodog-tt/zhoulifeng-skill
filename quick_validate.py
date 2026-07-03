@@ -251,6 +251,21 @@ def validate_launch_materials_set(skill_dir: Path) -> tuple[bool, str]:
     return True, "Launch materials are valid."
 
 
+def validate_v1_plan_set(skill_dir: Path) -> tuple[bool, str]:
+    scripts_dir = skill_dir / "scripts"
+    if str(scripts_dir) not in sys.path:
+        sys.path.insert(0, str(scripts_dir))
+    try:
+        from v1_plan_check import validate_v1_plan
+    except Exception as exc:  # pragma: no cover - defensive CLI guard
+        return False, f"could not import v1_plan_check: {exc}"
+
+    errors = validate_v1_plan(skill_dir)
+    if errors:
+        return False, "v1 planning invalid: " + "; ".join(errors)
+    return True, "v1.0 planning docs are valid."
+
+
 def main() -> int:
     skill_dir = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else Path(__file__).resolve().parent
     valid, message = validate_skill(skill_dir)
@@ -312,7 +327,12 @@ def main() -> int:
 
     launch_valid, launch_message = validate_launch_materials_set(skill_dir)
     print(launch_message)
-    return 0 if launch_valid else 1
+    if not launch_valid:
+        return 1
+
+    v1_valid, v1_message = validate_v1_plan_set(skill_dir)
+    print(v1_message)
+    return 0 if v1_valid else 1
 
 
 if __name__ == "__main__":

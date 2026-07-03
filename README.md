@@ -70,6 +70,21 @@ v0.7.0 已完成低体面/下三路/反升华口吻校准、自动评测和 ligh
 
 v0.8.0 不升级 candidate models，不放松 hard safety boundaries，不把未验证社交账号来源写成 verified evidence，也不把授权风格草稿描述成实时官方声明。v0.9 已录入第一条 reviewer concern 和 follow-up pass，但 full external review program 尚未完成。
 
+## v1.0 Planning
+
+The project is preparing for a future stable `v1.0.0` release. This is planning and release-candidate preparation, not a v1.0 release.
+
+See:
+
+- [docs/V1_PLAN.md](docs/V1_PLAN.md)
+- [docs/V1_RELEASE_CRITERIA.md](docs/V1_RELEASE_CRITERIA.md)
+- [docs/V1_GAP_ANALYSIS.md](docs/V1_GAP_ANALYSIS.md)
+- [docs/V1_CHECKLIST.md](docs/V1_CHECKLIST.md)
+- [docs/V1_TASKS.md](docs/V1_TASKS.md)
+- [docs/V1_READINESS.md](docs/V1_READINESS.md)
+- [docs/STABLE_PACKAGE.md](docs/STABLE_PACKAGE.md)
+- [reviews/pre-v1.0-audit.md](reviews/pre-v1.0-audit.md)
+
 评测入口：
 
 - [Dual Agent Protocol](evals/dual-agent-protocol.md)

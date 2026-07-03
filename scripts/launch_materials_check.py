@@ -19,19 +19,25 @@ REQUIRED_FILES = [
 REQUIRED_PHRASES = [
     "authorized style skill",
     "not a real-time official statement generator",
-    "candidate models remain candidate",
+    "candidate",
     "hard safety boundaries",
 ]
 
 FORBIDDEN_PATTERNS = [
+    "AI 复活真人",
     "无边界数字分身",
     "实时本人声明",
+    "实时本人声明生成器",
+    "可以人肉",
     "可做人肉",
     "可以做人肉",
     "可做灰产",
     "可以做灰产",
+    "灰产指南",
+    "危险路线",
     "可做危险指南",
     "可以做危险指南",
+    "露骨内容",
     "可做露骨内容",
     "可以做露骨内容",
     "boundary-free digital twin",

@@ -1,5 +1,26 @@
 # Changelog
 
+## [0.9.0] - unreleased
+
+### Added
+
+- Added v0.9 external reviewer packet.
+- Added external feedback intake instructions.
+
+### Changed
+
+- Polished launch copy for public release clarity.
+- Strengthened launch material checks against overclaiming.
+- Clarified that external review is not completed until real feedback is recorded.
+
+### Notes
+
+- No external feedback is fabricated.
+- Candidate models remain candidate.
+- X `@zlf86` remains unverified.
+- Hard safety boundaries remain unchanged.
+- v0.9 is not released yet.
+
 ## [0.8.0] - 2026-07-03
 
 ### Added

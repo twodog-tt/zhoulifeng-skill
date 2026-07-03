@@ -2,9 +2,9 @@
 
 `zhoulifeng-skill` is an authorized style Skill for Zhou Lifeng / 峰哥亡命天涯-style social observation, topic framing, commentary drafts, and voice adaptation.
 
-It is evidence-backed, evaluated, and safety-bounded. It is not a real-time official statement generator, not a live spokesperson, and not a boundary-free clone.
+It is evidence-backed, evaluated, and safety-bounded. It is not a real-time official statement generator, not a live spokesperson, and not an unrestricted personality clone.
 
-## What v0.7 Added
+## What Recent Releases Added
 
 v0.7 introduced lowbrow / anti-polish calibration:
 
@@ -18,6 +18,8 @@ v0.7 introduced lowbrow / anti-polish calibration:
 
 The v0.7-run-001 automated evaluation scored `100/100`, and the lightweight human review passed.
 
+v0.8 added launch materials, an external reviewer workflow, source verification workflow, and archive packaging automation. External review is prepared, not completed.
+
 ## What This Project Is
 
 - an authorized style Skill
@@ -29,7 +31,9 @@ The v0.7-run-001 automated evaluation scored `100/100`, and the lightweight huma
 
 - a real-time official statement generator
 - a tool for invented private views or facts
-- a tool for doxxing, harassment, explicit content, gray-market contact, dangerous routes, or platform evasion
+- a tool for doxxing, harassment, explicit sexual material, gray-market access, dangerous operational guidance, or platform evasion
 - evidence that candidate models are verified
 
 Candidate models remain candidate. Hard safety boundaries remain unchanged.
+
+X `@zlf86` remains unverified in this repository workflow unless independently confirmed in a future review.

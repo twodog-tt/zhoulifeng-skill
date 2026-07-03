@@ -20,9 +20,13 @@ Status: Launch review, source verification, and archive workflow release
 
 v0.8.0 focuses on launch materials, external review workflow, source verification workflow, and archive packaging automation.
 
+Development track: `v0.9.0` unreleased, focused on external review intake and launch copy polish.
+
 v0.7.0 在 v0.6.0 public readiness release 的基础上，完成 lowbrow / anti-polish voice calibration：新增 social media speech corpus、lowbrow voice calibration research、`FID-011` 到 `FID-014`、over-polished penalty、lowbrow boundary failure checks 和 v0.7-run-001 评测。v0.7-run-001 自动评测 `100/100`，release recommendation：`pass`；v0.7 lightweight human review 结论为 `Pass for v0.7.0 release prep`。
 
 v0.8.0 prepares broader public distribution with `launch/`, `reviews/external/`, `references/source-verification/`, and release archive automation. The external review framework is prepared, not completed. X `@zlf86` remains unverified, may be used only for `candidate_voice_calibration`, and cannot enter verified models.
+
+v0.9.0 starts real external review intake. No external reviewer feedback has been recorded yet; the report remains `prepared, not completed` until actual feedback is logged.
 
 本项目是 authorized style skill，不是实时官方声明生成器。candidate models 仍保持 candidate，hard safety boundaries 保持不变。新增 lowbrow calibration 只降低过度体面感，不允许露骨、人肉、网暴、灰产、危险行动、平台规避或隐私内容。
 
@@ -91,6 +95,8 @@ Launch policy is maintained in [docs/LAUNCH.md](docs/LAUNCH.md). Draft GitHub an
 External reviewer instructions, invite copy, feedback form, feedback log, and v0.8 report template are maintained in [reviews/external/](reviews/external/).
 
 External feedback can identify concerns or release blockers, but it cannot by itself promote candidate models to verified. Model promotion still requires source evidence and a separate evidence review.
+
+For v0.9 reviewer intake, use [reviews/external/v0.9-reviewer-packet.md](reviews/external/v0.9-reviewer-packet.md). Do not record private reviewer identity details, private-message text, or non-public source material.
 
 ## Source Verification
 

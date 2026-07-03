@@ -19,7 +19,17 @@ Candidate model promotion still requires evidence review, source verification, a
 - `reviewer-invite.md`: invitation copy for reviewers.
 - `feedback-form.md`: copyable feedback template.
 - `feedback-log.csv`: structured log for received feedback.
+- `v0.9-reviewer-packet.md`: copyable reviewer packet for v0.9 intake.
 - `reports/v0.8-external-review-report.md`: current v0.8 review status.
+
+## v0.9 Feedback Intake
+
+1. After receiving reviewer feedback, manually summarize it into `feedback-log.csv`.
+2. Each feedback row must include `reviewer_type`; do not record a real name.
+3. Do not record private identity information.
+4. Do not record private-message text; summarize the relevant point instead.
+5. Feedback cannot automatically upgrade a candidate model.
+6. Safety-boundary concerns should be triaged before style or polish concerns.
 
 ## Boundaries
 

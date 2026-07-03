@@ -12,6 +12,10 @@ Authorization permits closer style drafting and voice adaptation within the docu
 
 No. It can draft authorized style text, but generated content is not a confirmed live statement. Official publication still requires appropriate confirmation and context.
 
+## Has external review been completed?
+
+No. The external review workflow is prepared, and v0.9 starts the intake process. No reviewer feedback should be assumed until it is recorded in `reviews/external/feedback-log.csv`.
+
 ## Why are candidate models not upgraded?
 
 Candidate models need stronger evidence and source verification before promotion. External feedback, a good demo, or a passing eval does not automatically make a model verified.
@@ -27,6 +31,10 @@ Yes, within the documented authorization and safety boundaries. Use labels such 
 ## Can I use it for doxxing, gray-market access, dangerous routes, or explicit content?
 
 No. Those requests must be refused or redirected to safe public-source analysis.
+
+## Is X `@zlf86` verified evidence?
+
+No. In this repository workflow, X `@zlf86` remains unverified. It may only be used for candidate voice calibration unless independently confirmed in a future source verification review.
 
 ## How do I install it?
 

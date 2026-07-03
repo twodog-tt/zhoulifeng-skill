@@ -1,5 +1,32 @@
 # Changelog
 
+## [1.0.0-rc.1] - 2026-07-03
+
+### Added
+
+- Added v1.0 readiness documentation.
+- Added pre-v1.0 audit checklist.
+- Added pre-v1.0 model and source audit.
+- Added stable package documentation.
+- Added public assets checklist.
+
+### Changed
+
+- Resolved P1 release-readiness gaps.
+
+### Readiness
+
+- P0 remains 0.
+- P1 is now 0.
+- P2 remains non-blocking.
+
+### Notes
+
+- Candidate models remain candidate.
+- X @zlf86 remains unverified.
+- Hard safety boundaries remain unchanged.
+- This is release-candidate preparation, not v1.0 final.
+
 ## [1.0.0] - planning
 
 ### Added

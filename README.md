@@ -16,19 +16,19 @@ This is an authorized style-draft Skill, not an official live/personhood bot or 
 
 ## Current Status
 
-Current version: `v0.8.0`
+Current version: `v0.9.0`
 
-Status: Launch review, source verification, and archive workflow release
+Status: External review feedback and launch copy polish release
 
 v0.8.0 focuses on launch materials, external review workflow, source verification workflow, and archive packaging automation.
 
-Development track: `v0.9.0` unreleased, focused on external review intake and launch copy polish.
+Next planning track: `v1.0.0`, focused on broader external reviewer coverage, optional public proof links if available, screenshot/demo-run assets, stable install packaging, and final pre-1.0 source and candidate-model audit.
 
 v0.7.0 在 v0.6.0 public readiness release 的基础上，完成 lowbrow / anti-polish voice calibration：新增 social media speech corpus、lowbrow voice calibration research、`FID-011` 到 `FID-014`、over-polished penalty、lowbrow boundary failure checks 和 v0.7-run-001 评测。v0.7-run-001 自动评测 `100/100`，release recommendation：`pass`；v0.7 lightweight human review 结论为 `Pass for v0.7.0 release prep`。This is an automated evaluation result, not proof of perfect fidelity.
 
 v0.8.0 prepares broader public distribution with `launch/`, `reviews/external/`, `references/source-verification/`, and release archive automation. The external review framework was prepared in v0.8; v0.9 has recorded the first reviewer concern, but the full external review program is not complete. X `@zlf86` remains unverified, may be used only for `candidate_voice_calibration`, and cannot enter verified models.
 
-v0.9.0 starts real external review intake. Feedback batch `EXT-001` has been recorded with reviewer decision `concern`, not safety hold; the first action items are addressed pending follow-up reviewer confirmation.
+v0.9.0 starts real external review intake. Feedback batch `EXT-001` has been recorded with reviewer decision `concern`, not safety hold; `EXT-001-FUP` records a follow-up `pass` for v0.9.0 release prep. This is one external reviewer follow-up, not a claim that broad external review is complete.
 
 本项目是 authorized style skill，不是实时官方声明生成器。candidate models 仍保持 candidate，hard safety boundaries 保持不变。新增 lowbrow calibration 只降低过度体面感，不允许露骨、人肉、网暴、灰产、危险行动、平台规避或隐私内容。
 
@@ -68,7 +68,7 @@ This is not:
 
 v0.7.0 已完成低体面/下三路/反升华口吻校准、自动评测和 lightweight human review。v0.8.0 发布 launch materials、external review framework、source verification workflow、archive packaging automation 和公共发布材料。
 
-v0.8.0 不升级 candidate models，不放松 hard safety boundaries，不把未验证社交账号来源写成 verified evidence，也不把授权风格草稿描述成实时官方声明。v0.9 已录入第一条 reviewer concern，但 full external review program 尚未完成。
+v0.8.0 不升级 candidate models，不放松 hard safety boundaries，不把未验证社交账号来源写成 verified evidence，也不把授权风格草稿描述成实时官方声明。v0.9 已录入第一条 reviewer concern 和 follow-up pass，但 full external review program 尚未完成。
 
 评测入口：
 
@@ -115,10 +115,10 @@ Current status notes:
 Release archives can be generated locally with:
 
 ```bash
-python3 scripts/create_release_archive.py --version v0.8.0
+python3 scripts/create_release_archive.py --version v0.9.0
 ```
 
-The default output path is `dist/zhoulifeng-skill-v0.8.0.zip`. `dist/` is ignored by git and should not be committed.
+The default output path is `dist/zhoulifeng-skill-v0.9.0.zip`. `dist/` is ignored by git and should not be committed.
 
 Archive contents, exclusions, checks, and release-before-publish validation steps are documented in [docs/ARCHIVE_WORKFLOW.md](docs/ARCHIVE_WORKFLOW.md).
 

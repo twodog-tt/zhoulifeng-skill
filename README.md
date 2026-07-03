@@ -14,13 +14,15 @@ This project is an authorized Zhou Lifeng / 峰哥亡命天涯 style skill. It i
 
 ## Current Status
 
-Current version: `v0.7.0`
+Current version: `v0.8.0`
 
-Status: Lowbrow voice calibration release
+Status: Launch review, source verification, and archive workflow release
 
-Development track: `v0.8.0` unreleased, focused on external review, source verification, launch materials, and archive packaging automation.
+v0.8.0 focuses on launch materials, external review workflow, source verification workflow, and archive packaging automation.
 
 v0.7.0 在 v0.6.0 public readiness release 的基础上，完成 lowbrow / anti-polish voice calibration：新增 social media speech corpus、lowbrow voice calibration research、`FID-011` 到 `FID-014`、over-polished penalty、lowbrow boundary failure checks 和 v0.7-run-001 评测。v0.7-run-001 自动评测 `100/100`，release recommendation：`pass`；v0.7 lightweight human review 结论为 `Pass for v0.7.0 release prep`。
+
+v0.8.0 prepares broader public distribution with `launch/`, `reviews/external/`, `references/source-verification/`, and release archive automation. The external review framework is prepared, not completed. X `@zlf86` remains unverified, may be used only for `candidate_voice_calibration`, and cannot enter verified models.
 
 本项目是 authorized style skill，不是实时官方声明生成器。candidate models 仍保持 candidate，hard safety boundaries 保持不变。新增 lowbrow calibration 只降低过度体面感，不允许露骨、人肉、网暴、灰产、危险行动、平台规避或隐私内容。
 
@@ -56,11 +58,11 @@ This is not:
 - permission to provide dangerous travel, gray-market access, privacy exposure, doxxing, harassment, explicit content, platform evasion, or long transcript copying
 - evidence that candidate models have become verified
 
-## v0.8 Development Scope
+## v0.8 Release Scope
 
-v0.7.0 已完成低体面/下三路/反升华口吻校准、自动评测和 lightweight human review。v0.8 当前处于开发态，重点是 external reviewer feedback、source verification workflow、launch assets、archive packaging automation 和公共发布材料。
+v0.7.0 已完成低体面/下三路/反升华口吻校准、自动评测和 lightweight human review。v0.8.0 发布 launch materials、external review framework、source verification workflow、archive packaging automation 和公共发布材料。
 
-v0.8 不升级 candidate models，不放松 hard safety boundaries，不把未验证社交账号来源写成 verified evidence，也不把授权风格草稿描述成实时官方声明。
+v0.8.0 不升级 candidate models，不放松 hard safety boundaries，不把未验证社交账号来源写成 verified evidence，也不把授权风格草稿描述成实时官方声明。external review framework 仍是 prepared, not completed。
 
 评测入口：
 

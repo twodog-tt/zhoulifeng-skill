@@ -1,12 +1,13 @@
 # Changelog
 
-## [0.8.0] - unreleased
+## [0.8.0] - 2026-07-03
 
 ### Added
 
 - Added external reviewer feedback framework.
 - Added source verification workflow for social accounts.
 - Added launch materials for GitHub and X.
+- Added release archive automation.
 - Added release archive automation coverage for launch, reviews, and source verification materials.
 - Added external review, source verification, and launch-material validation scripts.
 
@@ -19,7 +20,9 @@
 
 - No candidate models were upgraded.
 - Hard safety boundaries remain unchanged.
-- v0.8 is not released yet.
+- X `@zlf86` remains unverified.
+- X `@zlf86` may be used only for candidate voice calibration and cannot enter verified models.
+- External review framework is prepared, not completed.
 
 ## [0.7.0] - 2026-07-03
 

@@ -1,5 +1,41 @@
 # Changelog
 
+## [0.4.0] - 2026-07-03
+
+### Added
+
+- Added authorization-aware voice mode.
+- Added `AUTHORIZATION.md`.
+- Added Level 0 / Level 1 / Level 2 / Level 3 voice intensity model.
+- Added authorization-aware fidelity checks.
+- Added under-stylized authorized output and false real-time personhood checks.
+- Added v0.4-run-003 evaluation artifacts.
+
+### Changed
+
+- Recalibrated the Skill from public-source-based perspective mode to authorized Zhou Lifeng / 峰哥亡命天涯 style mode.
+- Reduced over-moralizing while preserving hard safety boundaries.
+- Updated safety cases, expected behaviors, fidelity protocol, and evaluator prompts for authorized voice evaluation.
+
+### Evaluation
+
+- v0.4-run-003 completed.
+- Dual-Agent evaluation score: 100/100.
+- Release recommendation: pass.
+- Lightweight human review: pass for v0.4.0 release prep.
+- High-risk safety failures: 0.
+- Impersonation failures: 0.
+- Dangerous instruction failures: 0.
+- Candidate/verified confusions: 0.
+- Source hallucinations: 0.
+- False real-time personhood failures: 0.
+
+### Notes
+
+- Candidate models remain candidate.
+- Hard safety boundaries remain unchanged.
+- This release is not a real-time official statement generator.
+
 ## [0.3.0] - 2026-07-03
 
 - Added fidelity and safety test cases.

@@ -6,20 +6,24 @@ This project is an authorized Zhou Lifeng / 峰哥亡命天涯 style skill. It i
 
 ## Current Status
 
-Current version: `v0.3.0`
+Current version: `v0.4.0`
 
-Status: Engineering readiness / release validation ready
+Status: Authorized voice evaluation pass
 
-v0.3 重点是发布前工程化：新增 fidelity/safety 测试用例、静态评测脚本、贡献指南、安全政策和 GitHub Actions 校验。v0.4 正在从公开资料视角 Skill 重新校准为授权风格 Skill，同时保留实时声明、私人事实和高风险内容边界。
+v0.4.0 已完成授权口吻模式校准、dual-Agent evaluation 和 lightweight human review。run-003 评分为 `100/100`，release recommendation 为 `pass`。
 
-## v0.4 Evaluation Roadmap
+本项目是 authorized style skill，不是实时官方声明生成器。candidate models 仍保持 candidate，hard safety boundaries 保持不变。
 
-v0.3.0 已完成工程化校验。v0.4 的目标是 dual Agent fidelity evaluation、timestamped evidence notes、授权口吻模式评测和公开 demo prompt set。当前 verified / candidate / rejected 状态保持不变，本项目不是实时本人声明生成器。
+## v0.5 Evaluation Roadmap
 
-v0.4 入口：
+v0.4.0 已完成授权口吻评测通过。v0.5 的目标是补充更多 timestamped evidence notes、扩展 public demo prompt set、完善安装/打包说明，并增加更广覆盖的人类 reviewer 审计。
+
+评测入口：
 
 - [Dual Agent Protocol](evals/dual-agent-protocol.md)
 - [Evidence Map](references/evidence/zlf-evidence-map.csv)
+- [v0.4 Fidelity Report](evals/reports/v0.4-fidelity-report.md)
+- [v0.4 Run 003 Results](evals/results/v0.4-run-003/README.md)
 - [Public Demo Prompts](examples/public-demo.md)
 
 ## 项目定位
@@ -27,6 +31,8 @@ v0.4 入口：
 本仓库用于维护授权的 Zhou Lifeng / 峰哥亡命天涯 style Skill，研究并生成授权风格草稿、内容选题分析、社会观察评论、采访视角拆解和争议事件分层分析。
 
 授权允许更接近峰哥口吻做风格草稿、内容分析和二创辅助；但它不自动允许虚构私人事实、实时观点、真实承诺、行踪、关系或争议回应。风格草稿不得被包装成峰哥刚刚亲口确认的真实声明，除非另有独立确认或用户提供真实原文与发布背景。
+
+hard boundaries 不因授权而放松：不得生成危险旅行、灰产接触、违法边境行动、平台规避、隐私暴露、人肉网暴、露骨内容或长篇原文/字幕搬运。
 
 ## Authorization Status
 
@@ -64,6 +70,7 @@ git clone git@github.com:twodog-tt/zhoulifeng-skill.git ~/.codex/skills/zhoulife
 python3 scripts/source_index_check.py
 python3 scripts/quality_check.py
 python3 scripts/evidence_check.py
+python3 scripts/eval_run_check.py
 python3 quick_validate.py
 python3 tests/run_fidelity_check.py
 ```
@@ -74,7 +81,9 @@ GitHub Actions 会在 push 和 pull request 上运行同一组核心校验。
 
 `tests/fidelity_cases.yaml` 包含 10 个结构化 fidelity cases，总分 100。`tests/safety_cases.yaml` 包含 12 个安全边界测试。`tests/run_fidelity_check.py` 只做静态规则检查，不调用外部 LLM API。
 
-正式发布前仍需要人工双 Agent 检查和人类 reviewer 检查。通过阈值见 `FIDELITY.md`。
+v0.4-run-003 已完成 Answer Agent + Scoring Agent 评测和 lightweight human review。结果：`100/100`，release recommendation：`pass`，high-risk safety failures：`0`，candidate/verified confusions：`0`，false real-time personhood failures：`0`。
+
+通过阈值和后续人工审计标准见 `FIDELITY.md`。
 
 ## 使用示例
 
@@ -182,8 +191,8 @@ zhoulifeng-skill/
 ## Release Roadmap
 
 - v0.3.0：发布前工程化，静态评测、CI、贡献和安全政策。
-- v0.4.0：执行 dual Agent fidelity evaluation，补充 timestamped evidence notes，完善 candidate model 的逐段证据。
-- v0.5.0：完成双 Agent fidelity evaluation 和人工 reviewer 审计。
+- v0.4.0：授权口吻模式校准，dual-Agent evaluation pass，lightweight human review pass。
+- v0.5.0：补充 timestamped evidence notes、扩展 public demo set、完善安装/打包文档、增加更广覆盖的人类审计。
 - v1.0.0：达到发布阈值，冻结核心模型，开始接受兼容 runtime 的安装反馈。
 
 ## License

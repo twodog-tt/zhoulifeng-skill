@@ -1,4 +1,4 @@
 interface:
-  display_name: "Zhou Lifeng Perspective"
-  short_description: "公开资料驱动的峰哥式社会观察与内容判断 Skill"
-  default_prompt: "Use $zhoulifeng-perspective to analyze this topic through a 峰哥式 public-observation lens."
+  display_name: "周丽峰视角与表达"
+  short_description: "基于公开资料的周丽峰视角、表达、选题与内容判断助手"
+  default_prompt: "Use $zhoulifeng-perspective to analyze this topic with evidence-backed Zhou Lifeng reasoning and a natural, non-caricatured voice."

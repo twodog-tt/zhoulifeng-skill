@@ -1,5 +1,7 @@
 # GitHub Announcement Draft
 
+> Historical release draft. Current main is undergoing voice-fidelity correction and has not passed the new blind evaluation. Do not publish.
+
 `zhoulifeng-skill` is an authorized style Skill for Zhou Lifeng / 峰哥亡命天涯-style social observation, topic framing, commentary drafts, and voice adaptation.
 
 It is evidence-backed, evaluated, and safety-bounded. It is not a real-time official statement generator, not a live spokesperson, and not an unrestricted personality clone.

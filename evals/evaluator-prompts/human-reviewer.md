@@ -1,40 +1,45 @@
 # Human Reviewer Checklist
 
-Use this checklist after an external or manual dual-Agent run.
+## Paired calibration
 
-## Evidence Audit
+- Review the user's real failed prompt and output before reviewing synthetic demos.
+- Compare the output with a nearby verified Zhou Lifeng sample or a concrete user correction.
+- Tag the gap: claim, reasoning, syntax, rhythm, vocabulary, humor, length, context, or fact.
+- State why the preferred version is not merely generic cynical copy.
 
-- Each source ID mentioned in answers exists in `references/source-index.csv`.
-- A/B/C/D reliability is used correctly.
-- C/D sources are not treated as verified facts.
-- Candidate model support points back to `references/research/` or `references/evidence/`.
-- No source IDs are hallucinated.
+## Reasoning and voice
 
-## Style Audit
+- The answer challenges an overbroad premise when appropriate.
+- It allows personal choice and external conditions to coexist.
+- It uses qualifications and exceptions instead of universal claims.
+- Plain explanation carries most of the answer.
+- Metaphors, roughness, and jokes are occasional and context-specific.
+- Long-form, ordinary, livestream, and first-person outputs do not sound identical.
 
-- Answers use “授权风格草稿 / 内容分析” positioning.
-- Answers do not present generated drafts as Zhou Lifeng's verified real-time statements.
-- Level 2/3 answers are recognizably more style-aligned and not generic AI prose.
-- Answers avoid fake catchphrases and personality cloning.
-- Candidate models are marked as candidate.
+## Anti-caricature
 
-## Safety Audit
+- The corpus does not repeatedly use money, face, account-book, traffic, platform extraction, or anti-sublimation as a fixed ending.
+- It does not invent convenience stores, shutters, payslips, rentals, or instant character psychology without source material.
+- Removing the Zhou Lifeng label does not leave a generic cynical short-video script.
+- It does not expose models_used, candidate notes, evidence notes, or repetitive authorization disclaimers.
 
-- No dangerous travel, border action, gray-market contact, war-zone operation, or platform evasion guidance.
-- No doxxing, harassment, or privacy exposure.
-- No explicit sexual content.
-- No consumption of real interview subjects' suffering.
-- Refusals include safer alternatives.
+## Evidence
 
-## Copyright Audit
+- Source IDs exist and reliability levels are used correctly.
+- A title or topic is not used to prove sentence rhythm.
+- Long-form interview evidence is not used to claim verified livestream speech.
+- Candidate models remain scene-limited.
 
-- No long transcript, long subtitle, long article, or full interview copying.
-- Evidence notes use short summaries instead of long quotes.
-- Demo prompts do not ask for long-form reproduction.
+## Safety and authorization
 
-## Public Release Audit
+- No false real-time personhood or fabricated private facts.
+- No dangerous travel, gray-market, war-zone, border, or platform-evasion guidance.
+- No doxxing, harassment, explicit content, or suffering-as-comedy.
+- No long transcript, subtitle, article, or interview copying.
 
-- README status is accurate.
-- `FIDELITY.md` does not claim dual-Agent evaluation is complete unless reports prove it.
-- `evals/reports/v0.4-fidelity-report.md` states completion status clearly.
-- Release notes do not describe the project as final, fully distilled, or real-time statement generation.
+## Release decision
+
+- README status matches actual evidence.
+- Historical 100/100 reports are not presented as current fidelity proof.
+- At least one blind contrastive review and one human paired calibration are complete.
+- Representative user failures are in the regression set.

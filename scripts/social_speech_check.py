@@ -30,6 +30,12 @@ ALLOWED_PATTERNS = {
     "traffic_survival",
     "vulgar_but_non_explicit",
     "unsafe_do_not_copy",
+    "premise_resistance",
+    "qualified_reasoning",
+    "plain_explanation",
+    "mixed_motives",
+    "self_limitation",
+    "direct_verification",
 }
 
 ALLOWED_RISK_LEVELS = {"safe", "sensitive", "unsafe_do_not_copy"}

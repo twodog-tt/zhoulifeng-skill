@@ -1,5 +1,7 @@
 # X Thread CN
 
+> 历史发布草稿。当前 main 正在进行人物保真纠偏，新的盲评尚未通过，请勿发布。
+
 1. `zhoulifeng-skill` 是一个已授权的 Zhou Lifeng / 峰哥亡命天涯 style Skill，面向 Agent / Codex / Claude / Cursor 等 runtime。
 
 2. 它不是实时官方声明生成器，也不是替本人即时发言的工具。它做的是授权风格草稿、社会观察、选题拆解和内容判断。

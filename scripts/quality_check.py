@@ -58,6 +58,22 @@ def main() -> int:
         if term not in text:
             errors.append(f"missing safety term: {term}")
 
+    fidelity_terms = [
+        "## 自然输出协议",
+        "### 反模板",
+        "前提",
+        "混合原因",
+        "普通解释句",
+        "models_used",
+    ]
+    for term in fidelity_terms:
+        if term not in text:
+            errors.append(f"missing voice-fidelity term: {term}")
+
+    line_count = len(text.splitlines())
+    if line_count > 500:
+        errors.append(f"SKILL.md exceeds 500 lines: {line_count}")
+
     if errors:
         print("FAIL: quality check failed")
         for error in errors:

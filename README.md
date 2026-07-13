@@ -8,21 +8,21 @@
   <img src="docs/assets/pixel-feng.png" alt="zhoulifeng-skill 像素头像" width="360">
 </p>
 
-一个授权维护的「峰哥亡命天涯 / 周丽峰」风格 Agent Skill，用来生成社会观察、内容选题分析、授权口吻草稿和争议事件分层分析。
+一个授权维护的「峰哥亡命天涯 / 周丽峰」视角与表达 Agent Skill，用来生成社会观察、内容选题分析、授权口吻草稿和争议事件分层分析。
 
 它不是峰哥本人实时发言生成器，也不是官方在线人格 bot。模型输出不能替代周丽峰本人亲自确认的观点、承诺、行踪或争议回应。
 
 ## 当前状态
 
-- 当前版本：`v1.0.0`
-- 状态：稳定公开版
+- 最近发布版本：`v1.0.0`
+- 当前 main 状态：人物保真纠偏中，尚未重新通过独立盲评
 - GitHub Release：[`v1.0.0 - Stable Public Release`](https://github.com/twodog-tt/zhoulifeng-skill/releases/tag/v1.0.0)
 - 最终 v1.0 审计：通过
 - P0 / P1 / P2：`0 / 0 / 7`，剩余 P2 都是非阻塞的公开资产或发布流程优化
 
-v1.0.0 是本项目第一个稳定公开版本。它包含证据索引、verified / candidate / rejected 模型分层、安全硬边界、公开 demo、自动校验、双 Agent 评测记录、人类审核记录、外部 reviewer 反馈记录、来源验证流程、打包流程和 final v1.0 audit。
+v1.0.0 是本项目第一个稳定公开版本。用户实测随后发现：旧版容易把周丽峰写成“具体小场景 + 精致比喻 + 钱/脸面/流量 + 反升华”的通用犬儒文案。当前 main 已重写口吻与推理协议，并把旧评测降为历史记录。
 
-这代表项目已经适合公开安装、审计和试用；但它不代表「完美还原」，不代表 broad external review 已经完成，也不代表可以生成实时本人声明。
+当前静态结构和安全边界仍可验证，但人物保真要等新的对比评测和人类 paired calibration 完成后才能重新宣称通过。它不代表「完美还原」，也不代表可以生成实时本人声明。
 
 ## 快速入口
 
@@ -50,7 +50,7 @@ v1.0.0 是本项目第一个稳定公开版本。它包含证据索引、verifie
 - 峰哥式社会观察
 - 短视频选题拆解
 - 授权风格文案草稿
-- 冷感、荒诞、现实感评论
+- 自然、直接、有条件和例外的现实评论
 - 采访角度生成
 - 内容传播判断
 - 网红、边缘样本、社会议题分析
@@ -70,17 +70,17 @@ v1.0.0 是本项目第一个稳定公开版本。它包含证据索引、verifie
 - 露骨内容生成器
 - 长字幕、长访谈、原文搬运仓库
 
-授权允许更接近峰哥的语气、节奏、冷感、损劲和荒诞观察，但不允许虚构私人事实、实时行踪、真实承诺、未证实争议回应或危险操作细节。
+授权允许更接近峰哥的语气、节奏和公开推理方式，但不允许虚构私人事实、实时行踪、真实承诺、未证实争议回应或危险操作细节。
 
 ## 核心边界
 
-本项目的目标是「低道德说教感 + 高安全硬边界」。
+本项目的目标是「证据驱动的自然表达 + 高安全硬边界」。
 
 允许：
 
-- 更冷、更损、更现实的表达
-- 指出人性里的贪、怂、装、骗、欲望、虚荣和流量算计
-- 用不体面但不违法的方式拆解社会现象
+- 直接拆问题中过于整齐的前提
+- 同时讨论个人选择、客观处境、现实利益、能力与成本
+- 使用通俗解释句，并根据长访谈、普通问答或直播短评切换语体
 - 在授权范围内生成更像峰哥口吻的草稿
 
 禁止：
@@ -97,14 +97,17 @@ v1.0.0 是本项目第一个稳定公开版本。它包含证据索引、verifie
 
 `SKILL.md` 将模型分成三类。
 
-verified：
+verified（仅限当前长访谈 / 公开创作方法适用面，不代表跨场景稳定人格）：
 
-- `底层现场主义`
-- `边缘样本优先`
-- `内容判断四问`
+- `现场与边角细节`
+- `反脸谱化与混合责任`
+- `临场好奇与直接追问`
+- `受众、成本与内容价值并存`
+- `限定式判断与自我拆台`
 
 candidate：
 
+- `直播中的粗粝口语和损劲`
 - `荒诞现实解构`
 - `采访中的弱控制`
 - `流量红线雷达`
@@ -113,6 +116,7 @@ candidate：
 
 rejected / unsafe：
 
+- 通用犬儒文案冒充本人
 - 把「自嘲式冒险人格」作为可激活人格
 - 口头禅人格复刻
 - 争议站队与封禁原因脑补
@@ -176,6 +180,7 @@ python3 scripts/source_index_check.py
 python3 scripts/quality_check.py
 python3 scripts/evidence_check.py
 python3 scripts/social_speech_check.py
+python3 scripts/voice_output_check.py examples/public-demo-outputs.md
 python3 scripts/eval_run_check.py
 python3 scripts/demo_check.py
 python3 scripts/docs_check.py
@@ -205,13 +210,13 @@ GitHub Actions 会在 push 和 pull request 上运行核心校验。
 - human reviewer checklist
 - public demo outputs
 
-已记录的重要评测：
+历史评测：
 
 - `v0.4-run-003`：授权 voice mode 双 Agent 评测通过，`100/100`
 - `v0.7-run-001`：低体面 / 反 polished AI 口吻校准评测通过，`100/100`
 - final v1.0 audit：archive content audit、install smoke test、public readability review 均通过
 
-这些评测说明项目在测试面上表现合格，不等于完美保真。
+这些分数只说明当时协议下通过。由于旧题目、输出和评分标准共享同一套公式化表达，`v0.7-run-001` 不能再作为当前 voice fidelity 证明。新的通过条件见 [FIDELITY.md](FIDELITY.md)；在独立盲评和熟悉本人表达的人类校准完成前，当前状态是“待重新验证”。
 
 ## 打包
 

@@ -1,5 +1,7 @@
 # Launch
 
+> Launch hold: user testing found a material gap between the generated voice and Zhou Lifeng. This document is a historical release draft and must not be published until the new contrastive evaluation and human calibration pass.
+
 This document prepares public launch copy for the repository. It should describe the project as an authorized style Skill and public-source-supported social-observation toolkit, not as a real-time official statement generator.
 
 ## One-Line Introduction

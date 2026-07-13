@@ -106,7 +106,11 @@ def validate_eval_runs(skill_dir: Path) -> tuple[bool, str]:
     errors, run_count, row_count = run_validator(skill_dir)
     if errors:
         return False, "eval runs invalid: " + "; ".join(errors)
-    return True, f"Eval runs are valid with {run_count} run directory and {row_count} case rows."
+    return (
+        True,
+        f"Historical eval artifact structure is valid with {run_count} run directory "
+        f"and {row_count} case rows; this is not current voice-fidelity proof.",
+    )
 
 
 def validate_social_speech_set(skill_dir: Path) -> tuple[bool, str]:
@@ -189,6 +193,25 @@ def validate_demo_outputs_set(skill_dir: Path) -> tuple[bool, str]:
     if errors:
         return False, "demo outputs invalid: " + "; ".join(errors)
     return True, f"Demo outputs are valid with {demo_count} outputs."
+
+def validate_voice_output_set(skill_dir: Path) -> tuple[bool, str]:
+    scripts_dir = skill_dir / "scripts"
+    if str(scripts_dir) not in sys.path:
+        sys.path.insert(0, str(scripts_dir))
+    try:
+        from voice_output_check import check_answers, extract_answers
+    except Exception as exc:  # pragma: no cover - defensive CLI guard
+        return False, f"could not import voice_output_check: {exc}"
+
+    path = skill_dir / "examples" / "public-demo-outputs.md"
+    if not path.exists():
+        return False, f"missing {path}"
+
+    answers = extract_answers(path.read_text(encoding="utf-8"))
+    errors = check_answers(answers)
+    if errors:
+        return False, "public demo voice regression: " + "; ".join(errors)
+    return True, f"Public demo voice regression check passed for {len(answers)} outputs."
 
 
 def validate_archive_set(skill_dir: Path) -> tuple[bool, str]:
@@ -306,6 +329,11 @@ def main() -> int:
     outputs_valid, outputs_message = validate_demo_outputs_set(skill_dir)
     print(outputs_message)
     if not outputs_valid:
+        return 1
+
+    voice_valid, voice_message = validate_voice_output_set(skill_dir)
+    print(voice_message)
+    if not voice_valid:
         return 1
 
     archive_valid, archive_message = validate_archive_set(skill_dir)

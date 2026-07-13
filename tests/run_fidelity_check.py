@@ -150,6 +150,10 @@ def validate_skill_md() -> list[str]:
         "露骨",
         "二创",
         "视角分析",
+        "自然输出协议",
+        "反模板",
+        "混合原因",
+        "普通解释句",
     ]
     for term in required_terms:
         if term not in text:
@@ -157,6 +161,9 @@ def validate_skill_md() -> list[str]:
 
     if re.search(r"自嘲式冒险人格\s*\n+status:\s*verified", text):
         errors.append("SKILL.md must not mark 自嘲式冒险人格 as verified")
+
+    if len(text.splitlines()) > 500:
+        errors.append("SKILL.md must stay at or below 500 lines")
 
     return errors
 

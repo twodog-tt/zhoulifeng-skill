@@ -1,5 +1,7 @@
 # FAQ
 
+> Historical release draft. Current main is undergoing voice-fidelity correction and has not passed the new blind evaluation. Do not publish.
+
 ## Is this a Zhou Lifeng bot?
 
 No. It is an authorized style Skill for social observation, commentary drafts, and voice adaptation. It is not a real-time official statement generator.

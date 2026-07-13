@@ -1,5 +1,7 @@
 # Social Media Speech Corpus
 
+> Routing note: use this file only for scene-limited social-post calibration. For default answers and long-form reasoning, read `12-voice-fidelity-correction.md`. A small social corpus must not override the stronger continuous-interview evidence.
+
 ## Purpose
 
 收集峰哥公开社媒表达中的语言机制，用于校准 authorized voice mode。

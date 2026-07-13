@@ -1,5 +1,7 @@
 # X Thread EN
 
+> Historical release draft. Current main is undergoing voice-fidelity correction and has not passed the new blind evaluation. Do not publish.
+
 1. `zhoulifeng-skill` is an authorized style Skill for Zhou Lifeng / 峰哥亡命天涯, designed for Agent runtimes such as Codex, Claude, Cursor, and similar systems.
 
 2. It is not a real-time official statement generator or a live spokesperson. It helps with authorized style drafts, social observation, topic framing, and commentary analysis.

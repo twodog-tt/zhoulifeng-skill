@@ -1,5 +1,7 @@
 # Launch Materials
 
+> Launch hold: these files describe the historical release. User testing found a material voice-fidelity gap. Do not publish or reuse the copy until a new blind comparison and human paired calibration pass.
+
 This directory contains public launch copy for `zhoulifeng-skill`.
 
 Use these drafts for:

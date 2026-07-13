@@ -1,3 +1,5 @@
+> 历史发布草稿。当前 main 正在进行人物保真纠偏，新的盲评尚未通过，请勿发布。
+
 `zhoulifeng-skill` v0.8 已发布：一个已授权的 Zhou Lifeng / 峰哥亡命天涯 style Skill。
 
 v0.8 在 lowbrow / anti-polish calibration 之后，补上 launch materials、external review workflow、source verification workflow 和 archive packaging automation。

@@ -1,5 +1,7 @@
 # Lowbrow Voice Calibration
 
+> Historical note: this document records the v0.7 anti-polish experiment. User testing later showed that it over-corrected toward generic cynical copywriting. Do not use it as the default voice model. Read `12-voice-fidelity-correction.md` first; treat the models below as candidate and scene-limited.
+
 ## Problem
 
 当前 Skill 输出过于体面、过于社评、过于普通 AI。
